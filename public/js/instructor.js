@@ -134,24 +134,11 @@ function enableFacultyUI() {
 }
 
 function updateFacultyBadgeState(isLoggedIn) {
-  const openBtn = document.getElementById('facultyModalOpenBtn');
   const adminTab = document.getElementById('facultyTabBtn');
   const instructorTab = document.querySelector('[data-tab="instructor-notes-panel"]');
 
-  if (openBtn) {
-    if (isLoggedIn) {
-      openBtn.innerHTML = '<span>👨‍🏫</span><span>Instructor Mode (Unlocked)</span>';
-      openBtn.style.borderColor = 'var(--accent-emerald)';
-      openBtn.style.background = 'rgba(16, 185, 129, 0.15)';
-    } else {
-      openBtn.innerHTML = '<span>🔒</span><span>Instructor & Admin Passcode</span>';
-      openBtn.style.borderColor = '#4338ca';
-      openBtn.style.background = '';
-    }
-  }
-
   if (adminTab) {
-    adminTab.innerHTML = isLoggedIn ? '<span>🔓</span> Admin' : '<span>🔒</span> Admin';
+    adminTab.innerHTML = isLoggedIn ? '<span>👨‍🏫</span> Instructor &amp; Admin' : '<span>🔒</span> Instructor &amp; Admin';
   }
 
   if (instructorTab) {
@@ -259,12 +246,17 @@ function renderAdminTeachingPlaybook() {
           <button class="pb-tab-btn ${currentPlaybookTab === 'playbook' ? 'active' : ''}" onclick="switchAdminPlaybookTab('playbook')">
             <span>📖</span> 30-Topic Classroom Teaching Playbook (Hooks, Spoken Scripts, Live Code &amp; O/P)
           </button>
+          <button class="pb-tab-btn ${currentPlaybookTab === 'viva' ? 'active' : ''}" onclick="switchAdminPlaybookTab('viva')">
+            <span>🎯</span> Viva Interview Bank &amp; Blackboard Analogies
+          </button>
         </div>
       </div>
 
       <!-- Tab Content Area -->
       <div id="playbookTabContent">
-        ${currentPlaybookTab === 'blueprint' ? renderBlueprintContent(bp) : renderTopicsPlaybookContent()}
+        ${currentPlaybookTab === 'blueprint' ? renderBlueprintContent(bp) : 
+          currentPlaybookTab === 'viva' ? renderVivaContent() : 
+          renderTopicsPlaybookContent()}
       </div>
     </div>
   `;
@@ -660,6 +652,110 @@ function jumpToSyllabusTopic(unitNum, topicIdx) {
       }, 3500);
     }
   }, 350);
+}
+
+// -------------------------------------------------------------------------
+// TAB 3: VIVA INTERVIEW BANK & BLACKBOARD ANALOGIES (FROM INSTRUCTOR GUIDE)
+// -------------------------------------------------------------------------
+function renderVivaContent() {
+  if (typeof COURSE_DATA === 'undefined' || !COURSE_DATA.units) {
+    return '<div style="padding: 24px; color: var(--text-secondary);">Loading Viva Guide data...</div>';
+  }
+
+  let units = COURSE_DATA.units;
+  if (currentPlaybookUnitFilter !== 'all') {
+    units = COURSE_DATA.units.filter(u => u.unitNumber === parseInt(currentPlaybookUnitFilter, 10));
+  }
+
+  return `
+    <div class="playbook-topics-container">
+      <!-- Filter Bar -->
+      <div class="pb-filter-bar">
+        <div class="pb-filter-pills">
+          <button class="pb-pill ${currentPlaybookUnitFilter === 'all' ? 'active' : ''}" onclick="filterAdminPlaybookTopics('all')">
+            All 5 Units
+          </button>
+          <button class="pb-pill ${currentPlaybookUnitFilter === '1' ? 'active' : ''}" onclick="filterAdminPlaybookTopics(1)">
+            Unit 1: HTML &amp; CSS
+          </button>
+          <button class="pb-pill ${currentPlaybookUnitFilter === '2' ? 'active' : ''}" onclick="filterAdminPlaybookTopics(2)">
+            Unit 2: JS &amp; DOM
+          </button>
+          <button class="pb-pill ${currentPlaybookUnitFilter === '3' ? 'active' : ''}" onclick="filterAdminPlaybookTopics(3)">
+            Unit 3: Node.js
+          </button>
+          <button class="pb-pill ${currentPlaybookUnitFilter === '4' ? 'active' : ''}" onclick="filterAdminPlaybookTopics(4)">
+            Unit 4: React.js
+          </button>
+          <button class="pb-pill ${currentPlaybookUnitFilter === '5' ? 'active' : ''}" onclick="filterAdminPlaybookTopics(5)">
+            Unit 5: MERN Stack
+          </button>
+        </div>
+      </div>
+
+      <!-- Viva and Analogies Units List -->
+      <div class="pb-cards-grid">
+        ${units.map(unit => `
+          <div class="pb-topic-card open" id="vivaUnit-${unit.unitNumber}">
+            <div class="pb-card-header">
+              <div class="pb-header-left">
+                <span class="pb-unit-badge" style="background: ${unit.badgeColor}; color: #fff;">Unit ${unit.unitNumber}</span>
+                <h3 class="pb-topic-title">${escapeHtmlText(unit.title)} (${unit.hours} Hours)</h3>
+              </div>
+              <div class="pb-header-right">
+                <span style="font-size: 0.82rem; font-weight: 600; color: var(--text-muted); background: var(--bg-card); padding: 4px 10px; border-radius: var(--radius-full); border: 1px solid var(--border-color);">
+                  🎯 ${(unit.examQuestions || []).length} Exam / Viva Questions
+                </span>
+              </div>
+            </div>
+
+            <div class="pb-card-body">
+              <!-- Analogies Section -->
+              ${unit.conceptualAnalogies ? `
+                <div class="pb-section-box pb-mental-box">
+                  <div class="pb-sec-badge" style="color: #34d399; border-color: rgba(52, 211, 153, 0.3);">
+                    💡 BLACKBOARD TEACHING ANALOGIES (For Whiteboard &amp; Verbal Intuition)
+                  </div>
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 10px;">
+                    ${unit.conceptualAnalogies.map(a => `
+                      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                          <span style="font-size: 1.1rem;">🎯</span>
+                          <strong style="color: var(--text-primary); font-size: 0.95rem;">${escapeHtmlText(a.concept)}: ${escapeHtmlText(a.analogy)}</strong>
+                        </div>
+                        <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.55;">${escapeHtmlText(a.explanation)}</p>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              ` : ''}
+
+              <!-- Viva Questions Section -->
+              ${unit.examQuestions ? `
+                <div class="pb-section-box pb-steps-box">
+                  <div class="pb-sec-badge" style="color: #c084fc; border-color: rgba(192, 132, 252, 0.3);">
+                    🎯 ORAL VIVA &amp; TECHNICAL INTERVIEW QUESTIONS (Continuous Assessment &amp; Final Evaluation)
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+                    ${unit.examQuestions.map(eq => `
+                      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px; display: flex; align-items: flex-start; gap: 12px;">
+                        <span class="marks-badge ${eq.type.includes('2') ? 'badge-2marks' : 'badge-10marks'}" style="white-space: nowrap; margin-top: 2px;">
+                          ${escapeHtmlText(eq.type)}
+                        </span>
+                        <div style="font-size: 0.92rem; color: var(--text-primary); font-weight: 500; line-height: 1.5;">
+                          ${escapeHtmlText(eq.q)}
+                        </div>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              ` : ''}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
 }
 
 function escapeHtmlText(str) {

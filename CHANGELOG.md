@@ -9,9 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.4.0] - 2026-10-28
 
-### Added
-- **👨‍🏫 Master Instructor Lesson Delivery Playbook & Classroom Script in Admin Mode:**
-  - Integrated comprehensive teaching notes, lecture hooks, conversational Hinglish scripts, live coding recipes, and expected outputs inside Admin Mode (`#faculty-panel`).
+### Added & Unified
+- **🤝 Unified "Instructor & Admin" Portal:**
+  - Consolidated **Instructor Guide** (Viva Questions & Blackboard Analogies) and **Admin Mode** (Teaching Playbook, Project Blueprint, Roster, Announcements) into a single unified tab: **`🔒 Instructor & Admin`**.
+  - Added a dedicated 3rd sub-tab inside the Playbook: **`🎯 Viva Interview Bank & Blackboard Analogies`** featuring unit-by-unit whiteboard analogies and 2-mark / 10-mark oral exam questions with model answers.
+  - Eliminated navigation clutter and redundant password prompts by centralizing all faculty resources in one workspace.
+
+### Changed & Cleaned Up
+- **🧹 Top Header Streamlining:**
+  - Removed the two redundant buttons next to the Dark Mode toggle in the top-right header (`📽️ Live Studio` and `🔒 Instructor Passcode`).
+  - Top header now cleanly hosts solely the **`🌙 Dark Mode` / `☀️ Light Mode`** toggle.
+  - Live Studio remains accessible from the primary navbar, and the Instructor Passcode modal automatically triggers whenever clicking the `🔒 Instructor & Admin` tab when locked.
   - **Start Kaise Kare (The Hook / शुरुआत कैसे करें):** Curiosity-triggering opening questions and everyday dilemmas for all 30 curriculum topics.
   - **Class me Kya Bole (कक्षा में क्या बोलें - Spoken Script):** Direct bilingual (Hinglish/English) spoken teaching scripts allowing the instructor to glance at their notes and deliver clear lectures instantly.
   - **Pehle Kya Bataye (कोड से पहले क्या समझाएं):** Core mental models and real-world analogies to establish intuition before touching any code.

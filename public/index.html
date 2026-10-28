@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Full Stack Development using MERN | Developer Learning & Teaching Portal</title>
-  <meta name="description" content="Comprehensive interactive learning and development portal for Full Stack Development using MERN (MongoDB, Express.js, React.js, Node.js).">
+  <meta name="description"
+    content="Comprehensive interactive learning and development portal for Full Stack Development using MERN (MongoDB, Express.js, React.js, Node.js).">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <!-- Ambient Glow Effects -->
@@ -32,14 +35,6 @@
           <span class="theme-icon">🌙</span>
           <span class="theme-label">Dark Mode</span>
         </button>
-        <button id="headerLiveStudioBtn" class="btn-primary-action" style="background: linear-gradient(135deg, #059669, #10b981); display: flex; align-items: center; gap: 6px; padding: 8px 14px; font-size: 0.85rem;" title="Switch to Projector & Teaching Mode">
-          <span>📽️</span>
-          <span>Live Studio</span>
-        </button>
-        <button id="facultyModalOpenBtn" class="btn-faculty-toggle">
-          <span>🔒</span>
-          <span>Instructor Passcode</span>
-        </button>
       </div>
     </div>
   </header>
@@ -52,9 +47,6 @@
       </button>
       <button class="nav-tab-btn" data-tab="syllabus-panel">
         <span>📚</span> Modules
-      </button>
-      <button class="nav-tab-btn" data-tab="instructor-notes-panel">
-        <span>👨‍🏫</span> Instructor Guide
       </button>
       <button class="nav-tab-btn" data-tab="classroom-panel" id="classroomNavTab">
         <span>📽️</span> Live Studio
@@ -75,8 +67,11 @@
         <span>📖</span> Help & Guide
       </button>
       <button class="nav-tab-btn" data-tab="faculty-panel" id="facultyTabBtn">
-        <span>🔒</span> Admin
+        <span>🔒</span> Instructor &amp; Admin
       </button>
+      <a class="nav-tab-btn" href="./MERN-Notes_google_doc2026.pdf" target="_blank">
+        <span>📖</span> Notes
+      </a>
     </div>
   </nav>
 
@@ -92,8 +87,8 @@
         <div class="hero-badge-tag">⚡ FULL STACK DEVELOPER PORTAL</div>
         <h2 class="hero-title">Full Stack Web Development with MERN</h2>
         <p class="hero-subtitle">
-          An interactive, hands-on master portal for learning and teaching modern web programming. 
-          Covers Internet fundamentals, HTML5, CSS3, Modern JavaScript, Node.js, Express.js, MongoDB, and React.js 
+          An interactive, hands-on master portal for learning and teaching modern web programming.
+          Covers Internet fundamentals, HTML5, CSS3, Modern JavaScript, Node.js, Express.js, MongoDB, and React.js
           with real-world analogies, live runnable code blocks, full architecture diagrams, and concept check MCQs.
         </p>
 
@@ -102,8 +97,8 @@
           <button class="btn-hero-cta primary" onclick="navigateToTab('syllabus-panel')">
             <span>📚</span> Explore 5 Modules
           </button>
-          <button class="btn-hero-cta secondary" onclick="navigateToTab('instructor-notes-panel')">
-            <span>👨‍🏫</span> Instructor Notes & Viva
+          <button class="btn-hero-cta secondary" onclick="navigateToTab('faculty-panel')">
+            <span>👨‍🏫</span> Instructor &amp; Admin Portal
           </button>
           <button class="btn-hero-cta outline" onclick="navigateToTab('sandbox-panel')">
             <span>💻</span> Open Live Sandbox
@@ -151,7 +146,8 @@
           <span class="section-badge">🌟 PLATFORM CAPABILITIES</span>
           <h3 class="section-title">Everything Built Inside This Developer Platform</h3>
           <p class="section-subtitle">
-            Explore the complete suite of visual, practical, and pedagogical tools engineered for modern full-stack mastery.
+            Explore the complete suite of visual, practical, and pedagogical tools engineered for modern full-stack
+            mastery.
           </p>
         </div>
 
@@ -160,7 +156,8 @@
           <div class="home-feature-card" onclick="navigateToTab('syllabus-panel')">
             <div class="hfc-icon" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa;">📚</div>
             <h4>5 Comprehensive Units (45 Hours)</h4>
-            <p>From Internet fundamentals, HTML5 semantics, and CSS Box Model to Node.js async event loops, Express REST APIs, and React hooks.</p>
+            <p>From Internet fundamentals, HTML5 semantics, and CSS Box Model to Node.js async event loops, Express REST
+              APIs, and React hooks.</p>
             <span class="hfc-link">View Curriculum Modules →</span>
           </div>
 
@@ -168,7 +165,8 @@
           <div class="home-feature-card" onclick="navigateToTab('syllabus-panel')">
             <div class="hfc-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">🌍</div>
             <h4>Real-World Everyday Examples</h4>
-            <p>Every single concept includes a concrete real-world analogy (e.g. DOM as a family tree, Event Loop as a restaurant kitchen, Middleware as airport security).</p>
+            <p>Every single concept includes a concrete real-world analogy (e.g. DOM as a family tree, Event Loop as a
+              restaurant kitchen, Middleware as airport security).</p>
             <span class="hfc-link">Explore Analogies →</span>
           </div>
 
@@ -176,7 +174,8 @@
           <div class="home-feature-card" onclick="navigateToTab('sandbox-panel')">
             <div class="hfc-icon" style="background: rgba(168, 85, 247, 0.15); color: #c084fc;">💻</div>
             <h4>Live Runnable Code Blocks</h4>
-            <p>Each topic features clean syntax-highlighted code with an instant "⚡ Run in Sandbox" button to test in real-time with zero build steps.</p>
+            <p>Each topic features clean syntax-highlighted code with an instant "⚡ Run in Sandbox" button to test in
+              real-time with zero build steps.</p>
             <span class="hfc-link">Launch Sandbox →</span>
           </div>
 
@@ -184,7 +183,8 @@
           <div class="home-feature-card" onclick="navigateToTab('syllabus-panel')">
             <div class="hfc-icon" style="background: rgba(6, 182, 212, 0.15); color: #22d3ee;">🖼️</div>
             <h4>Architectural Infographics</h4>
-            <p>Crystal-clear uncropped visual schematics for 3-tier web architecture, DOM trees, Node event loop phases, and React Virtual DOM diffing with lightbox zoom.</p>
+            <p>Crystal-clear uncropped visual schematics for 3-tier web architecture, DOM trees, Node event loop phases,
+              and React Virtual DOM diffing with lightbox zoom.</p>
             <span class="hfc-link">Inspect Architecture →</span>
           </div>
 
@@ -192,23 +192,25 @@
           <div class="home-feature-card" onclick="navigateToTab('syllabus-panel')">
             <div class="hfc-icon" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24;">🎯</div>
             <h4>Row-Based Concept Check MCQs</h4>
-            <p>2 to 3 interactive self-check questions paired right next to each concept for active recall with instant answer explanations.</p>
+            <p>2 to 3 interactive self-check questions paired right next to each concept for active recall with instant
+              answer explanations.</p>
             <span class="hfc-link">Test Yourself →</span>
           </div>
 
-          <!-- Feature 6: Instructor Guide -->
-          <div class="home-feature-card" onclick="navigateToTab('instructor-notes-panel')">
+          <!-- Feature 6: Instructor & Admin Portal -->
+          <div class="home-feature-card" onclick="navigateToTab('faculty-panel')">
             <div class="hfc-icon" style="background: rgba(244, 63, 94, 0.15); color: #fb7185;">👨‍🏫</div>
-            <h4>Instructor Guide & Viva Bank</h4>
-            <p>Dedicated instructor tab with whiteboard analogies, common student pitfalls, viva interview questions, and lab evaluation rubrics.</p>
-            <span class="hfc-link">Open Teaching Notes →</span>
+            <h4>Instructor &amp; Admin Command Center</h4>
+            <p>Unified teacher portal with classroom delivery playbook, Hinglish spoken scripts, MERN capstone blueprint, viva interview bank, and roster.</p>
+            <span class="hfc-link">Open Instructor Portal →</span>
           </div>
 
           <!-- Feature 7: MERN Flow Visualizer -->
           <div class="home-feature-card" onclick="navigateToTab('visualizer-panel')">
             <div class="hfc-icon" style="background: rgba(99, 102, 241, 0.15); color: #818cf8;">🔄</div>
             <h4>MERN Architecture Flow Simulator</h4>
-            <p>Interactive step-through showing Client Request → Express Routing → Middleware → Controller → MongoDB Query → JSON Response.</p>
+            <p>Interactive step-through showing Client Request → Express Routing → Middleware → Controller → MongoDB
+              Query → JSON Response.</p>
             <span class="hfc-link">Step Through Flow →</span>
           </div>
 
@@ -216,7 +218,8 @@
           <div class="home-feature-card" onclick="navigateToTab('jwt-panel')">
             <div class="hfc-icon" style="background: rgba(236, 72, 153, 0.15); color: #f472b6;">🔑</div>
             <h4>JWT Cryptographic Security Lab</h4>
-            <p>Live JWT generator with color-coded Header/Payload/Signature analysis, bearer token authentication testing, and signature tampering alerts.</p>
+            <p>Live JWT generator with color-coded Header/Payload/Signature analysis, bearer token authentication
+              testing, and signature tampering alerts.</p>
             <span class="hfc-link">Open Security Lab →</span>
           </div>
         </div>
@@ -243,13 +246,15 @@
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div>
               <h4 style="color: var(--text-accent); margin-bottom: 10px;">📌 Core Objectives:</h4>
-              <ul id="objectivesList" style="padding-left: 20px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+              <ul id="objectivesList"
+                style="padding-left: 20px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
                 <!-- Populated dynamically -->
               </ul>
             </div>
             <div>
               <h4 style="color: var(--accent-emerald); margin-bottom: 10px;">🏆 Learning Outcomes (LOs):</h4>
-              <ul id="outcomesList" style="padding-left: 20px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+              <ul id="outcomesList"
+                style="padding-left: 20px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
                 <!-- Populated dynamically -->
               </ul>
             </div>
@@ -275,7 +280,8 @@
 
         <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
           <!-- Interactive vs Readable Mode Toggle -->
-          <div class="view-mode-toggle-group" title="Switch between Interactive Mode (Side-by-side MCQs & Sandbox) and Readable Mode (Distraction-Free Deep Study)">
+          <div class="view-mode-toggle-group"
+            title="Switch between Interactive Mode (Side-by-side MCQs & Sandbox) and Readable Mode (Distraction-Free Deep Study)">
             <button class="mode-pill-btn active" id="btnModeInteractive" onclick="switchConceptViewMode('interactive')">
               <span>🎮 Interactive Mode</span>
             </button>
@@ -286,7 +292,8 @@
 
           <div class="search-box-wrap">
             <span class="search-icon">🔍</span>
-            <input type="text" id="unitSearchInput" class="search-input" placeholder="Search topics, syntax, or concepts...">
+            <input type="text" id="unitSearchInput" class="search-input"
+              placeholder="Search topics, syntax, or concepts...">
           </div>
         </div>
       </div>
@@ -305,19 +312,24 @@
         <div class="igh-tag">👨‍🏫 INSTRUCTOR DESK & KNOWLEDGE BASE</div>
         <h2>Instructor Lecture Notes, Analogies & Viva Guide</h2>
         <p>
-          This tab contains comprehensive teaching points, blackboard breakdown strategies, 
-          common student traps, viva examination questions, and evaluation rubrics for all 30 curriculum subtopics. 
+          This tab contains comprehensive teaching points, blackboard breakdown strategies,
+          common student traps, viva examination questions, and evaluation rubrics for all 30 curriculum subtopics.
           Use this desk while conducting lectures or preparing lab viva evaluations!
         </p>
 
         <!-- Instructor Unit Filter Pills -->
         <div class="instructor-unit-pills">
-          <button class="inst-pill-btn active" data-inst-filter="all" onclick="filterInstructorNotes('all')">All 5 Units</button>
-          <button class="inst-pill-btn" data-inst-filter="1" onclick="filterInstructorNotes(1)">Unit 1: HTML & CSS</button>
-          <button class="inst-pill-btn" data-inst-filter="2" onclick="filterInstructorNotes(2)">Unit 2: JS & DOM</button>
+          <button class="inst-pill-btn active" data-inst-filter="all" onclick="filterInstructorNotes('all')">All 5
+            Units</button>
+          <button class="inst-pill-btn" data-inst-filter="1" onclick="filterInstructorNotes(1)">Unit 1: HTML &
+            CSS</button>
+          <button class="inst-pill-btn" data-inst-filter="2" onclick="filterInstructorNotes(2)">Unit 2: JS &
+            DOM</button>
           <button class="inst-pill-btn" data-inst-filter="3" onclick="filterInstructorNotes(3)">Unit 3: Node.js</button>
-          <button class="inst-pill-btn" data-inst-filter="4" onclick="filterInstructorNotes(4)">Unit 4: React.js</button>
-          <button class="inst-pill-btn" data-inst-filter="5" onclick="filterInstructorNotes(5)">Unit 5: MERN Integration</button>
+          <button class="inst-pill-btn" data-inst-filter="4" onclick="filterInstructorNotes(4)">Unit 4:
+            React.js</button>
+          <button class="inst-pill-btn" data-inst-filter="5" onclick="filterInstructorNotes(5)">Unit 5: MERN
+            Integration</button>
         </div>
       </div>
 
@@ -331,23 +343,28 @@
     <!-- TAB: CLASSROOM LECTURE & LIVE CODE (PROJECTOR MODE) -->
     <!-- ========================================== -->
     <section class="tab-content-panel" id="classroom-panel">
-      <div style="background: linear-gradient(135deg, rgba(5, 150, 105, 0.15), rgba(16, 185, 129, 0.05)); border: 1px solid var(--accent-emerald); border-radius: var(--radius-lg); padding: 24px 28px; margin-bottom: 24px;">
+      <div
+        style="background: linear-gradient(135deg, rgba(5, 150, 105, 0.15), rgba(16, 185, 129, 0.05)); border: 1px solid var(--accent-emerald); border-radius: var(--radius-lg); padding: 24px 28px; margin-bottom: 24px;">
         <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
           <div>
-            <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: rgba(16, 185, 129, 0.2); border-radius: var(--radius-full); color: #34d399; font-size: 0.78rem; font-weight: 700; margin-bottom: 8px;">
+            <div
+              style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: rgba(16, 185, 129, 0.2); border-radius: var(--radius-full); color: #34d399; font-size: 0.78rem; font-weight: 700; margin-bottom: 8px;">
               <span>📽️</span> PRESENTATION & LIVE CODING STUDIO
             </div>
             <h2 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: #fff;">
               Interactive Live Studio: Teach Concepts & Live Code
             </h2>
             <p style="color: var(--text-secondary); font-size: 0.95rem; max-width: 800px;">
-              Directly present this screen to your learners. Explain the architectural diagram and core analogies on the left, then live code and demonstrate execution on the right.
+              Directly present this screen to your learners. Explain the architectural diagram and core analogies on the
+              left, then live code and demonstrate execution on the right.
             </p>
           </div>
 
           <!-- Unit Selector Pills for Teacher -->
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <button class="unit-pill-btn active teach-unit-selector" data-unit="1" style="background: var(--unit1-color); color: #fff; border-color: var(--unit1-color);">U1: Web & HTML</button>
+            <button class="unit-pill-btn active teach-unit-selector" data-unit="1"
+              style="background: var(--unit1-color); color: #fff; border-color: var(--unit1-color);">U1: Web &
+              HTML</button>
             <button class="unit-pill-btn teach-unit-selector" data-unit="2">U2: JS & DOM</button>
             <button class="unit-pill-btn teach-unit-selector" data-unit="3">U3: Node.js</button>
             <button class="unit-pill-btn teach-unit-selector" data-unit="4">U4: React.js</button>
@@ -358,14 +375,15 @@
 
       <!-- Split Screen: Left = Visual Diagrams & Analogies, Right = Live Coding Playground -->
       <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 24px;" id="teachSplitStage">
-        
+
         <!-- Left: Visual Concept & Teacher Notes -->
         <div id="teachConceptPane" style="display: flex; flex-direction: column; gap: 20px;">
           <!-- Dynamically populated by updateLive StudioTeachView(unitNum) in js/app.js -->
         </div>
 
         <!-- Right: Live Code Scratchpad for Class Demonstration -->
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); display: flex; flex-direction: column; overflow: hidden; height: fit-content;">
+        <div
+          style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); display: flex; flex-direction: column; overflow: hidden; height: fit-content;">
           <div class="sandbox-toolbar" style="background: #111827;">
             <div>
               <span style="font-weight: 700; color: #38bdf8; font-size: 0.9rem;">💻 Live Code Scratchpad</span>
@@ -381,13 +399,16 @@
             </div>
           </div>
 
-          <textarea id="teachCodeEditor" class="code-textarea" style="min-height: 380px; font-size: 0.9rem;" spellcheck="false"></textarea>
+          <textarea id="teachCodeEditor" class="code-textarea" style="min-height: 380px; font-size: 0.9rem;"
+            spellcheck="false"></textarea>
 
-          <div style="background: #0f172a; border-top: 1px solid var(--border-color); padding: 8px 14px; font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); display: flex; justify-content: space-between;">
+          <div
+            style="background: #0f172a; border-top: 1px solid var(--border-color); padding: 8px 14px; font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); display: flex; justify-content: space-between;">
             <span>🖥️ Live Render Output (Instant Preview)</span>
             <span style="color: var(--accent-emerald);">Live Sandboxed Iframe</span>
           </div>
-          <iframe id="teachPreviewFrame" class="sandbox-iframe-preview" style="min-height: 340px;" sandbox="allow-scripts allow-modals"></iframe>
+          <iframe id="teachPreviewFrame" class="sandbox-iframe-preview" style="min-height: 340px;"
+            sandbox="allow-scripts allow-modals"></iframe>
         </div>
       </div>
     </section>
@@ -401,7 +422,8 @@
           💻 Live Web Programming Sandbox
         </h2>
         <p style="color: var(--text-secondary); font-size: 0.95rem;">
-          Practice HTML, CSS, JavaScript, and DOM manipulation directly in your browser. Select a curriculum preset or write custom code and hit <strong>Run Code</strong> for immediate preview.
+          Practice HTML, CSS, JavaScript, and DOM manipulation directly in your browser. Select a curriculum preset or
+          write custom code and hit <strong>Run Code</strong> for immediate preview.
         </p>
       </div>
 
@@ -449,7 +471,8 @@
             🔄 Full Stack MERN Architecture Explorer
           </h2>
           <p style="color: var(--text-secondary); font-size: 0.95rem;">
-            Click on any tier below to inspect its role, data flow, key files, and how it connects to the other components in a production full-stack application.
+            Click on any tier below to inspect its role, data flow, key files, and how it connects to the other
+            components in a production full-stack application.
           </p>
         </div>
 
@@ -503,7 +526,8 @@
           🔑 Interactive JWT & REST API Security Lab
         </h2>
         <p style="color: var(--text-secondary); font-size: 0.95rem;">
-          Hands-on simulation for Unit 3 & 5. Generate a cryptographically signed JSON Web Token (JWT), inspect its Header, Payload, and Signature, and test protected API endpoints.
+          Hands-on simulation for Unit 3 & 5. Generate a cryptographically signed JSON Web Token (JWT), inspect its
+          Header, Payload, and Signature, and test protected API endpoints.
         </p>
       </div>
 
@@ -513,7 +537,7 @@
           <h3 style="font-family: var(--font-heading); margin-bottom: 16px; color: var(--primary);">
             1. Issue JSON Web Token (Authentication)
           </h3>
-          
+
           <label class="form-label" for="jwtRollNo">Student / Developer ID:</label>
           <input type="text" id="jwtRollNo" class="text-input" value="DEV-101">
 
@@ -532,7 +556,9 @@
 
           <div style="margin-top: 20px;">
             <div class="form-label">Generated JWT Token:</div>
-            <textarea id="jwtOutputArea" class="text-input" rows="3" readonly style="font-family: var(--font-code); font-size: 0.8rem; background: var(--bg-tertiary);" placeholder="Token will appear here..."></textarea>
+            <textarea id="jwtOutputArea" class="text-input" rows="3" readonly
+              style="font-family: var(--font-code); font-size: 0.8rem; background: var(--bg-tertiary);"
+              placeholder="Token will appear here..."></textarea>
           </div>
         </div>
 
@@ -544,31 +570,38 @@
 
           <div class="jwt-parts-visual">
             <div>
-              <span style="font-size: 0.75rem; font-weight: 700; color: #f43f5e;">HEADER (Algorithm & Token Type):</span>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #f43f5e;">HEADER (Algorithm & Token
+                Type):</span>
               <div id="jwtHeaderBox" class="jwt-part-box jwt-header-box">{ "alg": "HS256", "typ": "JWT" }</div>
             </div>
             <div>
               <span style="font-size: 0.75rem; font-weight: 700; color: #a855f7;">PAYLOAD (Claims & Identity):</span>
-              <div id="jwtPayloadBox" class="jwt-part-box jwt-payload-box">{ "rollNo": "DEV-101", "name": "Riya Sen", "role": "student" }</div>
+              <div id="jwtPayloadBox" class="jwt-part-box jwt-payload-box">{ "rollNo": "DEV-101", "name": "Riya Sen",
+                "role": "student" }</div>
             </div>
             <div>
-              <span style="font-size: 0.75rem; font-weight: 700; color: #06b6d4;">SIGNATURE (Secret Verification):</span>
-              <div id="jwtSigBox" class="jwt-part-box jwt-signature-box">HMACSHA256(base64(header) + "." + base64(payload), secret)</div>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #06b6d4;">SIGNATURE (Secret
+                Verification):</span>
+              <div id="jwtSigBox" class="jwt-part-box jwt-signature-box">HMACSHA256(base64(header) + "." +
+                base64(payload), secret)</div>
             </div>
           </div>
 
           <div style="display: flex; gap: 10px; margin-top: 16px;">
-            <button id="testProtectedApiBtn" class="btn-primary-action" style="flex: 1; background: var(--accent-emerald);">
+            <button id="testProtectedApiBtn" class="btn-primary-action"
+              style="flex: 1; background: var(--accent-emerald);">
               🛡️ Call Protected Route (GET /api/auth/protected-profile)
             </button>
-            <button id="tamperJwtBtn" class="btn-primary-action" style="background: var(--accent-rose);" title="Tamper with token payload to test rejection">
+            <button id="tamperJwtBtn" class="btn-primary-action" style="background: var(--accent-rose);"
+              title="Tamper with token payload to test rejection">
               ⚠️ Tamper Token
             </button>
           </div>
 
           <div style="margin-top: 16px;">
             <div class="form-label">Server Response (Status & Data):</div>
-            <pre id="apiResponseBox" class="text-input" style="font-family: var(--font-code); font-size: 0.8rem; min-height: 80px; overflow-x: auto; background: var(--bg-tertiary);">Awaiting request...</pre>
+            <pre id="apiResponseBox" class="text-input"
+              style="font-family: var(--font-code); font-size: 0.8rem; min-height: 80px; overflow-x: auto; background: var(--bg-tertiary);">Awaiting request...</pre>
           </div>
         </div>
       </div>
@@ -588,7 +621,8 @@
           </p>
         </div>
         <div style="text-align: right;">
-          <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Current Assessment Score</div>
+          <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Current
+            Assessment Score</div>
           <div class="quiz-score-badge" id="quizScoreDisplay">0 / 12</div>
           <button id="resetQuizBtn" class="btn-copy-code" style="margin-top: 6px;">Reset Quiz</button>
         </div>
@@ -605,10 +639,11 @@
     <!-- ========================================== -->
     <section class="tab-content-panel" id="help-panel">
       <div class="help-guide-header">
-        <div class="igh-tag" style="background: rgba(99, 102, 241, 0.2); color: var(--primary);">📖 USER & INSTRUCTOR MANUAL</div>
+        <div class="igh-tag" style="background: rgba(99, 102, 241, 0.2); color: var(--primary);">📖 USER & INSTRUCTOR
+          MANUAL</div>
         <h2>How to Run, Operate & Master This Portal</h2>
         <p>
-          Complete walkthrough on how to start the local Node.js server, explore the 5 curriculum units, 
+          Complete walkthrough on how to start the local Node.js server, explore the 5 curriculum units,
           run code in real-time sandboxes, test JWT security tokens, and use instructor teaching tools.
         </p>
 
@@ -640,9 +675,12 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
           <h3>1. How to Run Locally</h3>
           <ul>
             <li><strong>Node.js Requirement:</strong> Node.js (v18 or higher) installed on your system.</li>
-            <li><strong>Port:</strong> Default port is <code>3000</code>. To change port: <code>PORT=4000 npm start</code>.</li>
-            <li><strong>Zero Bundler Setup:</strong> No Webpack or Vite build step required—pure vanilla JS/CSS for instant lightning-fast loading!</li>
-            <li><strong>Hot Reload / Restart:</strong> Press <code>Ctrl + C</code> in terminal to stop, and <code>npm start</code> to restart.</li>
+            <li><strong>Port:</strong> Default port is <code>3000</code>. To change port:
+              <code>PORT=4000 npm start</code>.</li>
+            <li><strong>Zero Bundler Setup:</strong> No Webpack or Vite build step required—pure vanilla JS/CSS for
+              instant lightning-fast loading!</li>
+            <li><strong>Hot Reload / Restart:</strong> Press <code>Ctrl + C</code> in terminal to stop, and
+              <code>npm start</code> to restart.</li>
           </ul>
         </div>
 
@@ -659,8 +697,10 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
                 <li>🎯 <strong>Concept Check MCQs:</strong> 2-3 instant interactive questions in the right column.</li>
               </ol>
             </li>
-            <li><strong>Interactive vs Readable Mode:</strong> Use the mode toggle pills above the modules to switch between side-by-side interactive mode and clean distraction-free reading mode.</li>
-            <li><strong>Full-Resolution Diagrams:</strong> Click on any architectural image to open the fullscreen high-res lightbox view.</li>
+            <li><strong>Interactive vs Readable Mode:</strong> Use the mode toggle pills above the modules to switch
+              between side-by-side interactive mode and clean distraction-free reading mode.</li>
+            <li><strong>Full-Resolution Diagrams:</strong> Click on any architectural image to open the fullscreen
+              high-res lightbox view.</li>
           </ul>
         </div>
 
@@ -669,9 +709,12 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
           <div class="help-card-icon">👨‍🏫</div>
           <h3>3. Dedicated Instructor Guide</h3>
           <ul>
-            <li><strong>Private Teaching Desk:</strong> Open the <code>👨‍🏫 Instructor Guide</code> tab to access lecture breakdown strategies, blackboard analogies, and student gotchas.</li>
-            <li><strong>Viva & Interview Bank:</strong> Detailed technical oral examination questions with model answers for all 30 topics.</li>
-            <li><strong>Lab Rubrics:</strong> Clear grading criteria (30 Points Continuous Evaluation) for evaluating hands-on coding submissions.</li>
+            <li><strong>Private Teaching Desk:</strong> Open the <code>👨‍🏫 Instructor Guide</code> tab to access
+              lecture breakdown strategies, blackboard analogies, and student gotchas.</li>
+            <li><strong>Viva & Interview Bank:</strong> Detailed technical oral examination questions with model answers
+              for all 30 topics.</li>
+            <li><strong>Lab Rubrics:</strong> Clear grading criteria (30 Points Continuous Evaluation) for evaluating
+              hands-on coding submissions.</li>
           </ul>
         </div>
 
@@ -680,9 +723,12 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
           <div class="help-card-icon">💻</div>
           <h3>4. Operating Live Code Sandbox</h3>
           <ul>
-            <li><strong>1-Click Code Loading:</strong> Click <strong>"⚡ Run in Sandbox"</strong> next to any code snippet across the modules to auto-load and execute it.</li>
-            <li><strong>Presets Menu:</strong> Choose from preloaded templates (HTML5 card, DOM manipulation, Async Node.js simulation, React state counter, and Fetch API).</li>
-            <li><strong>Live Execution:</strong> Click <strong>"⚡ Run Code"</strong> or press <code>Ctrl + Enter</code> to run in an isolated live preview iframe.</li>
+            <li><strong>1-Click Code Loading:</strong> Click <strong>"⚡ Run in Sandbox"</strong> next to any code
+              snippet across the modules to auto-load and execute it.</li>
+            <li><strong>Presets Menu:</strong> Choose from preloaded templates (HTML5 card, DOM manipulation, Async
+              Node.js simulation, React state counter, and Fetch API).</li>
+            <li><strong>Live Execution:</strong> Click <strong>"⚡ Run Code"</strong> or press <code>Ctrl + Enter</code>
+              to run in an isolated live preview iframe.</li>
           </ul>
         </div>
 
@@ -691,10 +737,15 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
           <div class="help-card-icon">🔑</div>
           <h3>5. Operating JWT Security Lab</h3>
           <ul>
-            <li><strong>Generate Token:</strong> Enter a Developer ID and Name, then click "Generate Cryptographic Token".</li>
-            <li><strong>Inspect Anatomy:</strong> View color-coded breakdown: <span style="color: #ef4444;">Header (Algorithm)</span>, <span style="color: #a855f7;">Payload (Claims)</span>, <span style="color: #06b6d4;">Signature</span>.</li>
-            <li><strong>Test Tampering:</strong> Click "Tamper Token Payload" to observe cryptographic signature failure (<code>403 Forbidden</code>).</li>
-            <li><strong>Access Protected API:</strong> Call <code>/api/auth/protected-profile</code> using the generated Bearer token.</li>
+            <li><strong>Generate Token:</strong> Enter a Developer ID and Name, then click "Generate Cryptographic
+              Token".</li>
+            <li><strong>Inspect Anatomy:</strong> View color-coded breakdown: <span style="color: #ef4444;">Header
+                (Algorithm)</span>, <span style="color: #a855f7;">Payload (Claims)</span>, <span
+                style="color: #06b6d4;">Signature</span>.</li>
+            <li><strong>Test Tampering:</strong> Click "Tamper Token Payload" to observe cryptographic signature failure
+              (<code>403 Forbidden</code>).</li>
+            <li><strong>Access Protected API:</strong> Call <code>/api/auth/protected-profile</code> using the generated
+              Bearer token.</li>
           </ul>
         </div>
 
@@ -703,9 +754,12 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
           <div class="help-card-icon">☀️</div>
           <h3>6. Themes & Accessibility</h3>
           <ul>
-            <li><strong>Light / Dark Mode:</strong> Click the pill button in the top right header (<code>🌙 Dark Mode</code> / <code>☀️ Light Mode</code>) anytime.</li>
-            <li><strong>High-Contrast Aesthetics:</strong> Both modes feature WCAG AAA compliant text contrast, curated color palettes, and luminous accents.</li>
-            <li><strong>Theme Persistence:</strong> Your preference is automatically remembered in browser <code>localStorage</code>.</li>
+            <li><strong>Light / Dark Mode:</strong> Click the pill button in the top right header
+              (<code>🌙 Dark Mode</code> / <code>☀️ Light Mode</code>) anytime.</li>
+            <li><strong>High-Contrast Aesthetics:</strong> Both modes feature WCAG AAA compliant text contrast, curated
+              color palettes, and luminous accents.</li>
+            <li><strong>Theme Persistence:</strong> Your preference is automatically remembered in browser
+              <code>localStorage</code>.</li>
           </ul>
         </div>
       </div>
@@ -725,8 +779,10 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
       </div>
 
       <!-- E-Resources Row -->
-      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; margin-bottom: 24px;">
-        <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 12px; color: var(--text-accent);">
+      <div
+        style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; margin-bottom: 24px;">
+        <h3
+          style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 12px; color: var(--text-accent);">
           🌐 Recommended E-Resources & Video Lecture Links:
         </h3>
         <div id="eResourcesList" style="display: flex; gap: 12px; flex-wrap: wrap;">
@@ -744,17 +800,20 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
     <!-- TAB 7: INSTRUCTOR DASHBOARD -->
     <!-- ========================================== -->
     <section class="tab-content-panel" id="faculty-panel">
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+      <div
+        style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
         <div>
           <h2 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 6px;">
             👨‍🏫 Instructor / Admin Command Center
           </h2>
           <p style="color: var(--text-secondary); font-size: 0.95rem;">
-            Classroom Delivery Playbook, End-to-End MERN Project Stitching Architecture, Announcements, &amp; 45h Curriculum Progress.
+            Classroom Delivery Playbook, End-to-End MERN Project Stitching Architecture, Announcements, &amp; 45h
+            Curriculum Progress.
           </p>
         </div>
         <div style="display: flex; gap: 10px;">
-          <button id="lockFacultyBtn" class="btn-primary-action" style="background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-color);">
+          <button id="lockFacultyBtn" class="btn-primary-action"
+            style="background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-color);">
             🔒 Lock Admin Mode
           </button>
         </div>
@@ -773,10 +832,12 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
           </h3>
           <form id="announcementForm">
             <label class="form-label" for="announceTitle">Notice Title:</label>
-            <input type="text" id="announceTitle" class="text-input" placeholder="e.g. Unit 3 Assessment Schedule" required>
+            <input type="text" id="announceTitle" class="text-input" placeholder="e.g. Unit 3 Assessment Schedule"
+              required>
 
             <label class="form-label" for="announceContent">Notice Details / Instructions:</label>
-            <textarea id="announceContent" class="text-input" rows="4" placeholder="Enter instructions for learners..." required></textarea>
+            <textarea id="announceContent" class="text-input" rows="4" placeholder="Enter instructions for learners..."
+              required></textarea>
 
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
               <input type="checkbox" id="announceUrgent" style="cursor: pointer;">
@@ -803,7 +864,9 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
                 <span>Unit 1: Web Programming, HTML5 & CSS</span>
                 <strong>9 / 9 Hours (Completed)</strong>
               </div>
-              <div class="progress-track"><div class="progress-fill" style="width: 100%; background: var(--unit1-color);"></div></div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 100%; background: var(--unit1-color);"></div>
+              </div>
             </div>
 
             <div>
@@ -811,7 +874,9 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
                 <span>Unit 2: JavaScript, DOM & JSON</span>
                 <strong>9 / 9 Hours (Completed)</strong>
               </div>
-              <div class="progress-track"><div class="progress-fill" style="width: 100%; background: var(--unit2-color);"></div></div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 100%; background: var(--unit2-color);"></div>
+              </div>
             </div>
 
             <div>
@@ -819,7 +884,9 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
                 <span>Unit 3: Node.js & Backend Foundations</span>
                 <strong>6 / 9 Hours (In Progress)</strong>
               </div>
-              <div class="progress-track"><div class="progress-fill" style="width: 66%; background: var(--unit3-color);"></div></div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 66%; background: var(--unit3-color);"></div>
+              </div>
             </div>
 
             <div>
@@ -827,7 +894,9 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
                 <span>Unit 4: React.js Frontend Development</span>
                 <strong>0 / 9 Hours (Upcoming)</strong>
               </div>
-              <div class="progress-track"><div class="progress-fill" style="width: 0%; background: var(--unit4-color);"></div></div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%; background: var(--unit4-color);"></div>
+              </div>
             </div>
 
             <div>
@@ -835,11 +904,14 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
                 <span>Unit 5: MERN Integration & Deployment</span>
                 <strong>0 / 9 Hours (Upcoming)</strong>
               </div>
-              <div class="progress-track"><div class="progress-fill" style="width: 0%; background: var(--unit5-color);"></div></div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%; background: var(--unit5-color);"></div>
+              </div>
             </div>
           </div>
 
-          <div style="background: var(--bg-tertiary); padding: 12px 16px; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary);">
+          <div
+            style="background: var(--bg-tertiary); padding: 12px 16px; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary);">
             <strong>Total Curriculum Delivered:</strong> 24 / 45 Hours (53.3% Progress)
           </div>
         </div>
@@ -888,8 +960,10 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
 
       <form id="facultyLoginForm">
         <label class="form-label" for="facultyPasscodeInput">Passcode:</label>
-        <input type="password" id="facultyPasscodeInput" class="text-input" placeholder="Enter security passcode" required autocomplete="off">
-        <div id="facultyErrorMsg" style="color: var(--accent-rose); font-size: 0.82rem; margin-bottom: 12px; display: none;"></div>
+        <input type="password" id="facultyPasscodeInput" class="text-input" placeholder="Enter security passcode"
+          required autocomplete="off">
+        <div id="facultyErrorMsg"
+          style="color: var(--accent-rose); font-size: 0.82rem; margin-bottom: 12px; display: none;"></div>
         <button type="submit" class="btn-primary-action" style="width: 100%;">
           Verify &amp; Unlock
         </button>
@@ -901,9 +975,11 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
   <footer class="site-footer">
     <div style="max-width: 1380px; margin: 0 auto;">
       <p><strong>Full Stack Web Development Academy</strong> • Modern MERN Engineering</p>
-      <p style="margin: 6px 0;">Curriculum: <strong>Full Stack Development using MERN</strong> (45 Hours Comprehensive)</p>
+      <p style="margin: 6px 0;">Curriculum: <strong>Full Stack Development using MERN</strong> (45 Hours Comprehensive)
+      </p>
       <p style="font-size: 0.78rem; color: var(--text-muted);">
-        Practical Assessment (30 Marks) & Final Evaluation (70 Marks) • Built with HTML5, CSS3, JavaScript, Node.js & Express
+        Practical Assessment (30 Marks) & Final Evaluation (70 Marks) • Built with HTML5, CSS3, JavaScript, Node.js &
+        Express
       </p>
     </div>
   </footer>
@@ -920,4 +996,5 @@ Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin<
   <script src="js/app.js"></script>
   <script src="js/instructor.js"></script>
 </body>
+
 </html>
