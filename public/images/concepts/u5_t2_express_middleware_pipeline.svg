@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.98" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0891b2" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981" />
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#a855f7" />
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="920" height="440" fill="url(#bgGrad)" rx="12" />
+  <rect width="918" height="438" x="1" y="1" fill="none" stroke="#334155" stroke-width="1.5" rx="11" />
+
+  <!-- Accent Grid Lines -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="75" x2="920" y2="75" />
+    <line x1="0" y1="150" x2="920" y2="150" />
+    <line x1="0" y1="225" x2="920" y2="225" />
+    <line x1="0" y1="300" x2="920" y2="300" />
+    <line x1="0" y1="375" x2="920" y2="375" />
+    <line x1="184" y1="0" x2="184" y2="440" />
+    <line x1="368" y1="0" x2="368" y2="440" />
+    <line x1="552" y1="0" x2="552" y2="440" />
+    <line x1="736" y1="0" x2="736" y2="440" />
+  </g>
+
+  <!-- Top Header Badge and Titles -->
+  <rect x="28" y="20" width="180" height="26" rx="13" fill="#a855f7" fill-opacity="0.18" stroke="#a855f7" stroke-width="1.2" />
+  <text x="118" y="37" font-family="'Outfit', system-ui, sans-serif" font-size="11" font-weight="700" fill="#a855f7" text-anchor="middle" letter-spacing="0.5">UNIT 5.2 • MIDDLEWARE PIPELINE</text>
+  
+  <text x="28" y="66" font-family="'Outfit', system-ui, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Express.js Middleware Execution Pipeline &amp; next()</text>
+  <text x="28" y="86" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#94a3b8">Sequential processing of HTTP request/response objects through logger, body-parser, auth, and route handler</text>
+
+  <!-- Diagram Graphical Content Stage -->
+  <g transform="translate(0, 16)">
+    
+      <rect x="40" y="130" width="130" height="180" rx="8" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="105" y="160" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#38bdf8" text-anchor="middle">Client HTTP</text>
+      <rect x="55" y="180" width="100" height="26" rx="4" fill="#0284c7" />
+      <text x="105" y="197" font-family="'Fira Code', monospace" font-size="9" fill="#ffffff" text-anchor="middle">POST /api/items</text>
+      <text x="105" y="240" font-family="'Inter', sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Headers + Body</text>
+
+      <path d="M 170 215 L 210 215" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)" />
+
+      <rect x="210" y="130" width="145" height="180" rx="8" fill="url(#cardGrad)" stroke="#6366f1" stroke-width="1.5" />
+      <text x="282" y="160" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#818cf8" text-anchor="middle">1. CORS &amp; Logger</text>
+      <rect x="220" y="175" width="125" height="110" rx="4" fill="#0f172a" />
+      <text x="230" y="200" font-family="'Fira Code', monospace" font-size="9" fill="#818cf8">app.use(cors())</text>
+      <text x="230" y="222" font-family="'Fira Code', monospace" font-size="9" fill="#cbd5e1">morgan('dev')</text>
+      <text x="230" y="255" font-family="'Fira Code', monospace" font-size="10" fill="#34d399">next();</text>
+
+      <path d="M 355 215 L 395 215" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow)" />
+
+      <rect x="395" y="130" width="145" height="180" rx="8" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="1.5" />
+      <text x="467" y="160" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#c084fc" text-anchor="middle">2. Body Parser</text>
+      <rect x="405" y="175" width="125" height="110" rx="4" fill="#0f172a" />
+      <text x="415" y="200" font-family="'Fira Code', monospace" font-size="9" fill="#c084fc">express.json()</text>
+      <text x="415" y="222" font-family="'Inter', sans-serif" font-size="9" fill="#cbd5e1">Populates req.body</text>
+      <text x="415" y="255" font-family="'Fira Code', monospace" font-size="10" fill="#34d399">next();</text>
+
+      <path d="M 540 215 L 580 215" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowPurple)" />
+
+      <rect x="580" y="130" width="145" height="180" rx="8" fill="url(#cardGrad)" stroke="#f59e0b" stroke-width="1.5" />
+      <text x="652" y="160" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">3. Auth Guard</text>
+      <rect x="590" y="175" width="125" height="110" rx="4" fill="#0f172a" />
+      <text x="600" y="200" font-family="'Fira Code', monospace" font-size="9" fill="#fbbf24">verifyJwt(req)</text>
+      <text x="600" y="222" font-family="'Inter', sans-serif" font-size="8.5" fill="#f87171">If invalid → 401</text>
+      <text x="600" y="255" font-family="'Fira Code', monospace" font-size="10" fill="#34d399">next();</text>
+
+      <path d="M 725 215 L 765 215" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)" />
+
+      <rect x="765" y="130" width="125" height="180" rx="8" fill="url(#cardGrad)" stroke="#10b981" stroke-width="1.5" />
+      <text x="827" y="160" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">4. Controller</text>
+      <rect x="775" y="175" width="105" height="110" rx="4" fill="#0f172a" />
+      <text x="785" y="200" font-family="'Fira Code', monospace" font-size="8.5" fill="#34d399">res.status(201)</text>
+      <text x="785" y="222" font-family="'Fira Code', monospace" font-size="8.5" fill="#34d399">.json(saved)</text>
+      <text x="785" y="255" font-family="'Inter', sans-serif" font-size="8" fill="#a7f3d0">Terminates req</text>
+    
+  </g>
+</svg>

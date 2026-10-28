@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.98" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0891b2" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981" />
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#a855f7" />
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="920" height="440" fill="url(#bgGrad)" rx="12" />
+  <rect width="918" height="438" x="1" y="1" fill="none" stroke="#334155" stroke-width="1.5" rx="11" />
+
+  <!-- Accent Grid Lines -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="75" x2="920" y2="75" />
+    <line x1="0" y1="150" x2="920" y2="150" />
+    <line x1="0" y1="225" x2="920" y2="225" />
+    <line x1="0" y1="300" x2="920" y2="300" />
+    <line x1="0" y1="375" x2="920" y2="375" />
+    <line x1="184" y1="0" x2="184" y2="440" />
+    <line x1="368" y1="0" x2="368" y2="440" />
+    <line x1="552" y1="0" x2="552" y2="440" />
+    <line x1="736" y1="0" x2="736" y2="440" />
+  </g>
+
+  <!-- Top Header Badge and Titles -->
+  <rect x="28" y="20" width="180" height="26" rx="13" fill="#06b6d4" fill-opacity="0.18" stroke="#06b6d4" stroke-width="1.2" />
+  <text x="118" y="37" font-family="'Outfit', system-ui, sans-serif" font-size="11" font-weight="700" fill="#06b6d4" text-anchor="middle" letter-spacing="0.5">UNIT 4.3 • REACT STATE</text>
+  
+  <text x="28" y="66" font-family="'Outfit', system-ui, sans-serif" font-size="20" font-weight="800" fill="#ffffff">React useState() Hook &amp; Component Re-render Cycle</text>
+  <text x="28" y="86" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#94a3b8">State triggers scheduled re-renders; setter functions maintain state across renders without mutating variables directly</text>
+
+  <!-- Diagram Graphical Content Stage -->
+  <g transform="translate(0, 16)">
+    
+      <rect x="50" y="125" width="230" height="195" rx="8" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.6" />
+      <text x="165" y="155" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#38bdf8" text-anchor="middle">1. Initial Mount</text>
+      <rect x="65" y="170" width="200" height="135" rx="4" fill="#0f172a" />
+      <text x="75" y="195" font-family="'Fira Code', monospace" font-size="9.5" fill="#cbd5e1">const [count, setCount] =</text>
+      <text x="75" y="215" font-family="'Fira Code', monospace" font-size="9.5" fill="#38bdf8">  useState(0);</text>
+      <text x="75" y="245" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">• count initialized to 0</text>
+      <text x="75" y="270" font-family="'Inter', sans-serif" font-size="10" fill="#34d399">• Returns &lt;h1&gt;0&lt;/h1&gt;</text>
+
+      <path d="M 280 215 L 340 215" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrowAmber)" />
+      <text x="310" y="200" font-family="'Inter', sans-serif" font-size="9" fill="#fbbf24" text-anchor="middle">onClick</text>
+
+      <rect x="340" y="125" width="240" height="195" rx="8" fill="url(#cardGrad)" stroke="#f59e0b" stroke-width="1.6" />
+      <text x="460" y="155" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#fbbf24" text-anchor="middle">2. Setter Invocation</text>
+      <rect x="355" y="170" width="210" height="135" rx="4" fill="#0f172a" />
+      <text x="365" y="195" font-family="'Fira Code', monospace" font-size="9.5" fill="#fbbf24">setCount(prev => prev + 1)</text>
+      <text x="365" y="225" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">• State change queued</text>
+      <text x="365" y="250" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">• React schedules re-render</text>
+      <text x="365" y="275" font-family="'Inter', sans-serif" font-size="10" fill="#f87171">• Does NOT mutate 'count' now</text>
+
+      <path d="M 580 215 L 640 215" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrowGreen)" />
+      <text x="610" y="200" font-family="'Inter', sans-serif" font-size="9" fill="#34d399" text-anchor="middle">Re-render</text>
+
+      <rect x="640" y="125" width="230" height="195" rx="8" fill="url(#cardGrad)" stroke="#10b981" stroke-width="1.6" />
+      <text x="755" y="155" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#34d399" text-anchor="middle">3. Updated Render</text>
+      <rect x="655" y="170" width="200" height="135" rx="4" fill="#0f172a" />
+      <text x="665" y="195" font-family="'Fira Code', monospace" font-size="9.5" fill="#34d399">count is now 1</text>
+      <text x="665" y="225" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">• Component re-executes</text>
+      <text x="665" y="250" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">• New VDOM tree produced</text>
+      <text x="665" y="275" font-family="'Inter', sans-serif" font-size="10" fill="#34d399">• Minimal DOM patch applied</text>
+    
+  </g>
+</svg>

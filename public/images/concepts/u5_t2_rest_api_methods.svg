@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="420" fill="url(#bgGrad)" rx="12" />
+  <rect width="898" height="418" x="1" y="1" fill="none" stroke="#334155" stroke-width="1.5" rx="11" />
+
+  <!-- Grid Accents -->
+  <g opacity="0.06" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="70" x2="900" y2="70" />
+    <line x1="0" y1="140" x2="900" y2="140" />
+    <line x1="0" y1="210" x2="900" y2="210" />
+    <line x1="0" y1="280" x2="900" y2="280" />
+    <line x1="0" y1="350" x2="900" y2="350" />
+    <line x1="150" y1="0" x2="150" y2="420" />
+    <line x1="300" y1="0" x2="300" y2="420" />
+    <line x1="450" y1="0" x2="450" y2="420" />
+    <line x1="600" y1="0" x2="600" y2="420" />
+    <line x1="750" y1="0" x2="750" y2="420" />
+  </g>
+
+  <!-- Top Title Bar -->
+  <rect x="24" y="18" width="160" height="24" rx="12" fill="#a855f7" fill-opacity="0.2" stroke="#a855f7" stroke-width="1" />
+  <text x="104" y="34" font-family="'Outfit', system-ui, sans-serif" font-size="11" font-weight="700" fill="#a855f7" text-anchor="middle" letter-spacing="0.5">UNIT 5.2 • RESTFUL SERVICES</text>
+  
+  <text x="24" y="62" font-family="'Outfit', system-ui, sans-serif" font-size="19" font-weight="800" fill="#ffffff">RESTful API Architecture &amp; Standard HTTP Verbs</text>
+  <text x="24" y="80" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#94a3b8">Resource-based URL naming conventions mapped to CRUD database operations and HTTP status codes</text>
+
+  <!-- Content Graphic -->
+  <g transform="translate(0, 15)">
+    
+      <!-- Table Header -->
+      <rect x="50" y="115" width="800" height="34" rx="6" fill="#1e293b" stroke="#334155" />
+      <text x="90" y="137" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#94a3b8">VERB</text>
+      <text x="210" y="137" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#94a3b8">ENDPOINT ROUTE</text>
+      <text x="430" y="137" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#94a3b8">CRUD ACTION</text>
+      <text x="610" y="137" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#94a3b8">DATABASE OPERATION</text>
+      <text x="790" y="137" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#94a3b8">STATUS</text>
+
+      <!-- Row 1: GET -->
+      <rect x="50" y="155" width="800" height="34" rx="4" fill="#0f172a" stroke="#334155" />
+      <rect x="65" y="161" width="55" height="22" rx="4" fill="#0369a1" />
+      <text x="92" y="176" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">GET</text>
+      <text x="210" y="176" font-family="'Fira Code', monospace" font-size="10" fill="#38bdf8">/api/books</text>
+      <text x="430" y="176" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">READ (Fetch List)</text>
+      <text x="610" y="176" font-family="'Fira Code', monospace" font-size="10" fill="#94a3b8">Book.find()</text>
+      <text x="790" y="176" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#34d399">200 OK</text>
+
+      <!-- Row 2: POST -->
+      <rect x="50" y="195" width="800" height="34" rx="4" fill="#0f172a" stroke="#334155" />
+      <rect x="65" y="201" width="55" height="22" rx="4" fill="#059669" />
+      <text x="92" y="216" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">POST</text>
+      <text x="210" y="216" font-family="'Fira Code', monospace" font-size="10" fill="#34d399">/api/books</text>
+      <text x="430" y="216" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">CREATE (New Resource)</text>
+      <text x="610" y="216" font-family="'Fira Code', monospace" font-size="10" fill="#94a3b8">Book.create(req.body)</text>
+      <text x="790" y="216" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#34d399">201 Created</text>
+
+      <!-- Row 3: PUT -->
+      <rect x="50" y="235" width="800" height="34" rx="4" fill="#0f172a" stroke="#334155" />
+      <rect x="65" y="241" width="55" height="22" rx="4" fill="#d97706" />
+      <text x="92" y="256" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">PUT</text>
+      <text x="210" y="256" font-family="'Fira Code', monospace" font-size="10" fill="#fbbf24">/api/books/:id</text>
+      <text x="430" y="256" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">UPDATE (Full Replace)</text>
+      <text x="610" y="256" font-family="'Fira Code', monospace" font-size="10" fill="#94a3b8">Book.findByIdAndUpdate()</text>
+      <text x="790" y="256" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#34d399">200 OK</text>
+
+      <!-- Row 4: DELETE -->
+      <rect x="50" y="275" width="800" height="34" rx="4" fill="#0f172a" stroke="#334155" />
+      <rect x="65" y="281" width="55" height="22" rx="4" fill="#e11d48" />
+      <text x="92" y="296" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">DEL</text>
+      <text x="210" y="296" font-family="'Fira Code', monospace" font-size="10" fill="#f43f5e">/api/books/:id</text>
+      <text x="430" y="296" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">DELETE (Remove)</text>
+      <text x="610" y="296" font-family="'Fira Code', monospace" font-size="10" fill="#94a3b8">Book.findByIdAndDelete()</text>
+      <text x="790" y="296" font-family="'Fira Code', monospace" font-size="10" font-weight="700" fill="#f43f5e">204 No Content</text>
+    
+  </g>
+</svg>

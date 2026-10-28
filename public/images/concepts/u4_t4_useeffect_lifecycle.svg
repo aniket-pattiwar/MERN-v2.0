@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.98" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0891b2" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981" />
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#a855f7" />
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="920" height="440" fill="url(#bgGrad)" rx="12" />
+  <rect width="918" height="438" x="1" y="1" fill="none" stroke="#334155" stroke-width="1.5" rx="11" />
+
+  <!-- Accent Grid Lines -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="75" x2="920" y2="75" />
+    <line x1="0" y1="150" x2="920" y2="150" />
+    <line x1="0" y1="225" x2="920" y2="225" />
+    <line x1="0" y1="300" x2="920" y2="300" />
+    <line x1="0" y1="375" x2="920" y2="375" />
+    <line x1="184" y1="0" x2="184" y2="440" />
+    <line x1="368" y1="0" x2="368" y2="440" />
+    <line x1="552" y1="0" x2="552" y2="440" />
+    <line x1="736" y1="0" x2="736" y2="440" />
+  </g>
+
+  <!-- Top Header Badge and Titles -->
+  <rect x="28" y="20" width="180" height="26" rx="13" fill="#06b6d4" fill-opacity="0.18" stroke="#06b6d4" stroke-width="1.2" />
+  <text x="118" y="37" font-family="'Outfit', system-ui, sans-serif" font-size="11" font-weight="700" fill="#06b6d4" text-anchor="middle" letter-spacing="0.5">UNIT 4.4 • SIDE EFFECTS</text>
+  
+  <text x="28" y="66" font-family="'Outfit', system-ui, sans-serif" font-size="20" font-weight="800" fill="#ffffff">React useEffect() Lifecycle &amp; Dependency Array Mechanics</text>
+  <text x="28" y="86" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#94a3b8">Managing Side Effects (API calls, subscriptions, timers) and cleanup functions across component lifecycles</text>
+
+  <!-- Diagram Graphical Content Stage -->
+  <g transform="translate(0, 16)">
+    
+      <g transform="translate(40, 120)">
+        <rect x="0" y="0" width="260" height="205" rx="8" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.5" />
+        <text x="130" y="28" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#38bdf8" text-anchor="middle">No Dependency Array: useEffect(fn)</text>
+        <rect x="15" y="42" width="230" height="148" rx="4" fill="#0f172a" />
+        <text x="25" y="68" font-family="'Fira Code', monospace" font-size="9" fill="#38bdf8">useEffect(() => { ... })</text>
+        <text x="25" y="98" font-family="'Inter', sans-serif" font-size="10" fill="#f87171">⚠️ Runs after EVERY render!</text>
+        <text x="25" y="125" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">• Component mounts</text>
+        <text x="25" y="148" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">• Any prop or state changes</text>
+        <text x="25" y="172" font-family="'Inter', sans-serif" font-size="9" fill="#f87171">Risk of infinite fetch loops</text>
+
+        <rect x="290" y="0" width="260" height="205" rx="8" fill="url(#cardGrad)" stroke="#10b981" stroke-width="1.5" />
+        <text x="420" y="28" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">Empty Array: useEffect(fn, [])</text>
+        <rect x="305" y="42" width="230" height="148" rx="4" fill="#0f172a" />
+        <text x="315" y="68" font-family="'Fira Code', monospace" font-size="9" fill="#34d399">useEffect(() => { ... }, [])</text>
+        <text x="315" y="98" font-family="'Inter', sans-serif" font-size="10" fill="#34d399">✓ Runs ONCE on mount</text>
+        <text x="315" y="125" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">• Fetch initial API data</text>
+        <text x="315" y="148" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">• Set up global listeners</text>
+        <text x="315" y="172" font-family="'Inter', sans-serif" font-size="9" fill="#a7f3d0">Equivalent to componentDidMount</text>
+
+        <rect x="580" y="0" width="260" height="205" rx="8" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="1.5" />
+        <text x="710" y="28" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#c084fc" text-anchor="middle">With Dependencies: useEffect(fn, [id])</text>
+        <rect x="595" y="42" width="230" height="148" rx="4" fill="#0f172a" />
+        <text x="605" y="68" font-family="'Fira Code', monospace" font-size="9" fill="#c084fc">useEffect(() => { ... }, [userId])</text>
+        <text x="605" y="98" font-family="'Inter', sans-serif" font-size="10" fill="#c084fc">✓ Runs when 'userId' changes</text>
+        <text x="605" y="125" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">• Re-fetches matching user profile</text>
+        <text x="605" y="148" font-family="'Fira Code', monospace" font-size="9" fill="#fbbf24">return () => cleanup();</text>
+        <text x="605" y="172" font-family="'Inter', sans-serif" font-size="9" fill="#fbbf24">Cleanup aborts previous pending request</text>
+      </g>
+    
+  </g>
+</svg>

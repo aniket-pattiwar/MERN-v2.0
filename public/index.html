@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Stack Development using MERN | Developer Learning & Teaching Portal</title>
+  <meta name="description" content="Comprehensive interactive learning and development portal for Full Stack Development using MERN (MongoDB, Express.js, React.js, Node.js).">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow ambient-top-left"></div>
+  <div class="ambient-glow ambient-bottom-right"></div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-wrapper">
+        <div class="brand-logo-badge">M</div>
+        <div class="brand-meta">
+          <h1>
+            Full Stack Web Development
+            <span class="course-code-badge">MERN STACK</span>
+          </h1>
+          <p>Interactive Mastery Portal: MongoDB • Express.js • React.js • Node.js</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="btn-theme-toggle" title="Toggle Theme (Dark / Light)">
+          <span class="theme-icon">🌙</span>
+          <span class="theme-label">Dark Mode</span>
+        </button>
+        <button id="headerLiveStudioBtn" class="btn-primary-action" style="background: linear-gradient(135deg, #059669, #10b981); display: flex; align-items: center; gap: 6px; padding: 8px 14px; font-size: 0.85rem;" title="Switch to Projector & Teaching Mode">
+          <span>📽️</span>
+          <span>Live Studio</span>
+        </button>
+        <button id="facultyModalOpenBtn" class="btn-faculty-toggle">
+          <span>🔒</span>
+          <span>Instructor Passcode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Navigation Tabs (Optimized for desktop display without overflow) -->
+  <nav class="main-nav-bar">
+    <div class="nav-container">
+      <button class="nav-tab-btn active" data-tab="home-panel">
+        <span>🏠</span> Home
+      </button>
+      <button class="nav-tab-btn" data-tab="syllabus-panel">
+        <span>📚</span> Modules
+      </button>
+      <button class="nav-tab-btn" data-tab="instructor-notes-panel">
+        <span>👨‍🏫</span> Instructor Guide
+      </button>
+      <button class="nav-tab-btn" data-tab="classroom-panel" id="classroomNavTab">
+        <span>📽️</span> Live Studio
+      </button>
+      <button class="nav-tab-btn" data-tab="sandbox-panel">
+        <span>💻</span> Sandbox
+      </button>
+      <button class="nav-tab-btn" data-tab="visualizer-panel">
+        <span>🔄</span> MERN Flow
+      </button>
+      <button class="nav-tab-btn" data-tab="jwt-panel">
+        <span>🔑</span> JWT Lab
+      </button>
+      <button class="nav-tab-btn" data-tab="quiz-panel">
+        <span>📝</span> Quizzes
+      </button>
+      <button class="nav-tab-btn" data-tab="help-panel">
+        <span>📖</span> Help & Guide
+      </button>
+      <button class="nav-tab-btn" data-tab="faculty-panel" id="facultyTabBtn">
+        <span>🔒</span> Admin
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="site-main">
+
+    <!-- ========================================== -->
+    <!-- TAB 1: HOME & PLATFORM OVERVIEW -->
+    <!-- ========================================== -->
+    <section class="tab-content-panel active" id="home-panel">
+      <!-- Hero Card -->
+      <div class="hero-card">
+        <div class="hero-badge-tag">⚡ FULL STACK DEVELOPER PORTAL</div>
+        <h2 class="hero-title">Full Stack Web Development with MERN</h2>
+        <p class="hero-subtitle">
+          An interactive, hands-on master portal for learning and teaching modern web programming. 
+          Covers Internet fundamentals, HTML5, CSS3, Modern JavaScript, Node.js, Express.js, MongoDB, and React.js 
+          with real-world analogies, live runnable code blocks, full architecture diagrams, and concept check MCQs.
+        </p>
+
+        <!-- Quick Launch CTA Bar -->
+        <div class="hero-cta-group">
+          <button class="btn-hero-cta primary" onclick="navigateToTab('syllabus-panel')">
+            <span>📚</span> Explore 5 Modules
+          </button>
+          <button class="btn-hero-cta secondary" onclick="navigateToTab('instructor-notes-panel')">
+            <span>👨‍🏫</span> Instructor Notes & Viva
+          </button>
+          <button class="btn-hero-cta outline" onclick="navigateToTab('sandbox-panel')">
+            <span>💻</span> Open Live Sandbox
+          </button>
+          <button class="btn-hero-cta outline" onclick="navigateToTab('jwt-panel')">
+            <span>🔑</span> JWT Security Lab
+          </button>
+          <button class="btn-hero-cta outline" onclick="navigateToTab('help-panel')">
+            <span>📖</span> How to Run & Help
+          </button>
+        </div>
+
+        <!-- Metric Highlights Banner -->
+        <div class="hero-metrics-bar">
+          <div class="metric-item">
+            <span class="metric-num">5</span>
+            <span class="metric-label">Structured Units</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-num">30</span>
+            <span class="metric-label">In-Depth Concepts</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-num">30+</span>
+            <span class="metric-label">Real-World Analogies</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-num">30+</span>
+            <span class="metric-label">Live Code Snippets</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-num">70+</span>
+            <span class="metric-label">Self-Assessment MCQs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kya Kya Hai Is Website Me (Comprehensive Platform Showcase) -->
+      <div class="platform-features-section">
+        <div class="section-title-wrap">
+          <span class="section-badge">🌟 PLATFORM CAPABILITIES</span>
+          <h3 class="section-title">Everything Built Inside This Developer Platform</h3>
+          <p class="section-subtitle">
+            Explore the complete suite of visual, practical, and pedagogical tools engineered for modern full-stack mastery.
+          </p>
+        </div>
+
+        <div class="home-feature-cards-grid">
+          <!-- Feature 1: Curriculum -->
+          <div class="home-feature-card" onclick="navigateToTab('syllabus-panel')">
+            <div class="hfc-icon" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa;">📚</div>
+            <h4>5 Comprehensive Units (45 Hours)</h4>
+            <p>From Internet fundamentals, HTML5 semantics, and CSS Box Model to Node.js async event loops, Express REST APIs, and React hooks.</p>
+            <span class="hfc-link">View Curriculum Modules →</span>
+          </div>
+
+          <!-- Feature 2: Real-World Examples -->
+          <div class="home-feature-card" onclick="navigateToTab('syllabus-panel')">
+            <div class="hfc-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">🌍</div>
+            <h4>Real-World Everyday Examples</h4>
+            <p>Every single concept includes a concrete real-world analogy (e.g. DOM as a family tree, Event Loop as a restaurant kitchen, Middleware as airport security).</p>
+            <span class="hfc-link">Explore Analogies →</span>
+          </div>
+
+          <!-- Feature 3: Live Code Sandbox -->
+          <div class="home-feature-card" onclick="navigateToTab('sandbox-panel')">
+            <div class="hfc-icon" style="background: rgba(168, 85, 247, 0.15); color: #c084fc;">💻</div>
+            <h4>Live Runnable Code Blocks</h4>
+            <p>Each topic features clean syntax-highlighted code with an instant "⚡ Run in Sandbox" button to test in real-time with zero build steps.</p>
+            <span class="hfc-link">Launch Sandbox →</span>
+          </div>
+
+          <!-- Feature 4: High-Res Infographics -->
+          <div class="home-feature-card" onclick="navigateToTab('syllabus-panel')">
+            <div class="hfc-icon" style="background: rgba(6, 182, 212, 0.15); color: #22d3ee;">🖼️</div>
+            <h4>Architectural Infographics</h4>
+            <p>Crystal-clear uncropped visual schematics for 3-tier web architecture, DOM trees, Node event loop phases, and React Virtual DOM diffing with lightbox zoom.</p>
+            <span class="hfc-link">Inspect Architecture →</span>
+          </div>
+
+          <!-- Feature 5: Concept Check MCQs -->
+          <div class="home-feature-card" onclick="navigateToTab('syllabus-panel')">
+            <div class="hfc-icon" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24;">🎯</div>
+            <h4>Row-Based Concept Check MCQs</h4>
+            <p>2 to 3 interactive self-check questions paired right next to each concept for active recall with instant answer explanations.</p>
+            <span class="hfc-link">Test Yourself →</span>
+          </div>
+
+          <!-- Feature 6: Instructor Guide -->
+          <div class="home-feature-card" onclick="navigateToTab('instructor-notes-panel')">
+            <div class="hfc-icon" style="background: rgba(244, 63, 94, 0.15); color: #fb7185;">👨‍🏫</div>
+            <h4>Instructor Guide & Viva Bank</h4>
+            <p>Dedicated instructor tab with whiteboard analogies, common student pitfalls, viva interview questions, and lab evaluation rubrics.</p>
+            <span class="hfc-link">Open Teaching Notes →</span>
+          </div>
+
+          <!-- Feature 7: MERN Flow Visualizer -->
+          <div class="home-feature-card" onclick="navigateToTab('visualizer-panel')">
+            <div class="hfc-icon" style="background: rgba(99, 102, 241, 0.15); color: #818cf8;">🔄</div>
+            <h4>MERN Architecture Flow Simulator</h4>
+            <p>Interactive step-through showing Client Request → Express Routing → Middleware → Controller → MongoDB Query → JSON Response.</p>
+            <span class="hfc-link">Step Through Flow →</span>
+          </div>
+
+          <!-- Feature 8: JWT & REST API Lab -->
+          <div class="home-feature-card" onclick="navigateToTab('jwt-panel')">
+            <div class="hfc-icon" style="background: rgba(236, 72, 153, 0.15); color: #f472b6;">🔑</div>
+            <h4>JWT Cryptographic Security Lab</h4>
+            <p>Live JWT generator with color-coded Header/Payload/Signature analysis, bearer token authentication testing, and signature tampering alerts.</p>
+            <span class="hfc-link">Open Security Lab →</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Objectives & Learning Outcomes Drawer (Moved to Home to Keep Modules Clean) -->
+      <div class="unit-card open" style="margin-top: 30px; margin-bottom: 24px;">
+        <div class="unit-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="unit-header-info">
+            <div class="unit-number-tag" style="background: var(--primary);">🎯</div>
+            <div class="unit-title-wrap">
+              <h3>Core Objectives & Learning Outcomes (LO1 - LO5)</h3>
+              <div class="unit-badge-row">
+                <span class="badge-hours">Industry-Ready Standards</span>
+                <span class="badge-hours">5 Core Competencies</span>
+              </div>
+            </div>
+          </div>
+          <div class="unit-actions-right">
+            <span class="toggle-arrow">▼</span>
+          </div>
+        </div>
+        <div class="unit-body">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+              <h4 style="color: var(--text-accent); margin-bottom: 10px;">📌 Core Objectives:</h4>
+              <ul id="objectivesList" style="padding-left: 20px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                <!-- Populated dynamically -->
+              </ul>
+            </div>
+            <div>
+              <h4 style="color: var(--accent-emerald); margin-bottom: 10px;">🏆 Learning Outcomes (LOs):</h4>
+              <ul id="outcomesList" style="padding-left: 20px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                <!-- Populated dynamically -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: MODULES & CURRICULUM (PURE LEARNING FOCUS) -->
+    <!-- ========================================== -->
+    <section class="tab-content-panel" id="syllabus-panel">
+      <!-- Unit Filter & Search Controls & View Mode -->
+      <div class="unit-filter-bar">
+        <div class="unit-pills">
+          <button class="unit-pill-btn active" data-filter="all">All Modules (1-5)</button>
+          <button class="unit-pill-btn" data-filter="1">Unit 1: HTML/CSS</button>
+          <button class="unit-pill-btn" data-filter="2">Unit 2: JS & DOM</button>
+          <button class="unit-pill-btn" data-filter="3">Unit 3: Node.js</button>
+          <button class="unit-pill-btn" data-filter="4">Unit 4: React.js</button>
+          <button class="unit-pill-btn" data-filter="5">Unit 5: MERN Integration</button>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+          <!-- Interactive vs Readable Mode Toggle -->
+          <div class="view-mode-toggle-group" title="Switch between Interactive Mode (Side-by-side MCQs & Sandbox) and Readable Mode (Distraction-Free Deep Study)">
+            <button class="mode-pill-btn active" id="btnModeInteractive" onclick="switchConceptViewMode('interactive')">
+              <span>🎮 Interactive Mode</span>
+            </button>
+            <button class="mode-pill-btn" id="btnModeReadable" onclick="switchConceptViewMode('readable')">
+              <span>📖 Readable Mode</span>
+            </button>
+          </div>
+
+          <div class="search-box-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="unitSearchInput" class="search-input" placeholder="Search topics, syntax, or concepts...">
+          </div>
+        </div>
+      </div>
+
+      <!-- Units Container (Injected by JS with Notes, Code, Img, Examples & MCQs) -->
+      <div id="unitsContainer">
+        <!-- Rendered from COURSE_DATA.units in js/app.js -->
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: INSTRUCTOR GUIDE & TEACHING NOTES -->
+    <!-- ========================================== -->
+    <section class="tab-content-panel" id="instructor-notes-panel">
+      <div class="instructor-guide-header">
+        <div class="igh-tag">👨‍🏫 INSTRUCTOR DESK & KNOWLEDGE BASE</div>
+        <h2>Instructor Lecture Notes, Analogies & Viva Guide</h2>
+        <p>
+          This tab contains comprehensive teaching points, blackboard breakdown strategies, 
+          common student traps, viva examination questions, and evaluation rubrics for all 30 curriculum subtopics. 
+          Use this desk while conducting lectures or preparing lab viva evaluations!
+        </p>
+
+        <!-- Instructor Unit Filter Pills -->
+        <div class="instructor-unit-pills">
+          <button class="inst-pill-btn active" data-inst-filter="all" onclick="filterInstructorNotes('all')">All 5 Units</button>
+          <button class="inst-pill-btn" data-inst-filter="1" onclick="filterInstructorNotes(1)">Unit 1: HTML & CSS</button>
+          <button class="inst-pill-btn" data-inst-filter="2" onclick="filterInstructorNotes(2)">Unit 2: JS & DOM</button>
+          <button class="inst-pill-btn" data-inst-filter="3" onclick="filterInstructorNotes(3)">Unit 3: Node.js</button>
+          <button class="inst-pill-btn" data-inst-filter="4" onclick="filterInstructorNotes(4)">Unit 4: React.js</button>
+          <button class="inst-pill-btn" data-inst-filter="5" onclick="filterInstructorNotes(5)">Unit 5: MERN Integration</button>
+        </div>
+      </div>
+
+      <!-- Container for Instructor Cards -->
+      <div id="instructorNotesContainer" class="instructor-notes-container">
+        <!-- Injected dynamically by renderInstructorNotes() -->
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB: CLASSROOM LECTURE & LIVE CODE (PROJECTOR MODE) -->
+    <!-- ========================================== -->
+    <section class="tab-content-panel" id="classroom-panel">
+      <div style="background: linear-gradient(135deg, rgba(5, 150, 105, 0.15), rgba(16, 185, 129, 0.05)); border: 1px solid var(--accent-emerald); border-radius: var(--radius-lg); padding: 24px 28px; margin-bottom: 24px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+          <div>
+            <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: rgba(16, 185, 129, 0.2); border-radius: var(--radius-full); color: #34d399; font-size: 0.78rem; font-weight: 700; margin-bottom: 8px;">
+              <span>📽️</span> PRESENTATION & LIVE CODING STUDIO
+            </div>
+            <h2 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: #fff;">
+              Interactive Live Studio: Teach Concepts & Live Code
+            </h2>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; max-width: 800px;">
+              Directly present this screen to your learners. Explain the architectural diagram and core analogies on the left, then live code and demonstrate execution on the right.
+            </p>
+          </div>
+
+          <!-- Unit Selector Pills for Teacher -->
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="unit-pill-btn active teach-unit-selector" data-unit="1" style="background: var(--unit1-color); color: #fff; border-color: var(--unit1-color);">U1: Web & HTML</button>
+            <button class="unit-pill-btn teach-unit-selector" data-unit="2">U2: JS & DOM</button>
+            <button class="unit-pill-btn teach-unit-selector" data-unit="3">U3: Node.js</button>
+            <button class="unit-pill-btn teach-unit-selector" data-unit="4">U4: React.js</button>
+            <button class="unit-pill-btn teach-unit-selector" data-unit="5">U5: Full Stack MERN</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Split Screen: Left = Visual Diagrams & Analogies, Right = Live Coding Playground -->
+      <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 24px;" id="teachSplitStage">
+        
+        <!-- Left: Visual Concept & Teacher Notes -->
+        <div id="teachConceptPane" style="display: flex; flex-direction: column; gap: 20px;">
+          <!-- Dynamically populated by updateLive StudioTeachView(unitNum) in js/app.js -->
+        </div>
+
+        <!-- Right: Live Code Scratchpad for Class Demonstration -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); display: flex; flex-direction: column; overflow: hidden; height: fit-content;">
+          <div class="sandbox-toolbar" style="background: #111827;">
+            <div>
+              <span style="font-weight: 700; color: #38bdf8; font-size: 0.9rem;">💻 Live Code Scratchpad</span>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Write code live for demonstrations</div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button id="teachRunCodeBtn" class="btn-run-code" style="padding: 6px 14px;">
+                ▶ Run Code
+              </button>
+              <button id="teachResetCodeBtn" class="btn-copy-code" style="padding: 6px 10px;">
+                ↺ Reset
+              </button>
+            </div>
+          </div>
+
+          <textarea id="teachCodeEditor" class="code-textarea" style="min-height: 380px; font-size: 0.9rem;" spellcheck="false"></textarea>
+
+          <div style="background: #0f172a; border-top: 1px solid var(--border-color); padding: 8px 14px; font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); display: flex; justify-content: space-between;">
+            <span>🖥️ Live Render Output (Instant Preview)</span>
+            <span style="color: var(--accent-emerald);">Live Sandboxed Iframe</span>
+          </div>
+          <iframe id="teachPreviewFrame" class="sandbox-iframe-preview" style="min-height: 340px;" sandbox="allow-scripts allow-modals"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: INTERACTIVE CODE SANDBOX -->
+    <!-- ========================================== -->
+    <section class="tab-content-panel" id="sandbox-panel">
+      <div style="margin-bottom: 20px;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 6px;">
+          💻 Live Web Programming Sandbox
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          Practice HTML, CSS, JavaScript, and DOM manipulation directly in your browser. Select a curriculum preset or write custom code and hit <strong>Run Code</strong> for immediate preview.
+        </p>
+      </div>
+
+      <div class="sandbox-container">
+        <!-- Editor Panel -->
+        <div class="sandbox-editor-panel">
+          <div class="sandbox-toolbar">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Load Unit Preset:</span>
+              <select id="sandboxPresetSelect" class="sandbox-select">
+                <option value="preset-unit1">Unit 1: Responsive HTML5 & CSS Card</option>
+                <option value="preset-unit2">Unit 2: JS DOM Dynamic List & JSON</option>
+                <option value="preset-unit3">Unit 3: Async JavaScript Promises & Event Loop</option>
+                <option value="preset-unit4">Unit 4: React-style State & Event Handler</option>
+                <option value="preset-unit5">Unit 5: Fetch REST API & JWT Simulation</option>
+              </select>
+            </div>
+            <button id="runCodeBtn" class="btn-run-code">
+              ▶ Run Code
+            </button>
+          </div>
+          <textarea id="codeEditorInput" class="code-textarea" spellcheck="false"></textarea>
+        </div>
+
+        <!-- Preview Panel -->
+        <div class="sandbox-preview-panel">
+          <div class="sandbox-toolbar">
+            <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">
+              🖥️ Live Render Output (Interactive Iframe)
+            </span>
+            <button id="clearSandboxBtn" class="btn-copy-code">Clear Canvas</button>
+          </div>
+          <iframe id="sandboxPreviewFrame" class="sandbox-iframe-preview" sandbox="allow-scripts allow-modals"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: MERN ARCHITECTURE FLOW -->
+    <!-- ========================================== -->
+    <section class="tab-content-panel" id="visualizer-panel">
+      <div class="mern-visualizer-container">
+        <div style="text-align: center; max-width: 750px; margin: 0 auto 30px;">
+          <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 8px;">
+            🔄 Full Stack MERN Architecture Explorer
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            Click on any tier below to inspect its role, data flow, key files, and how it connects to the other components in a production full-stack application.
+          </p>
+        </div>
+
+        <div class="mern-flow-grid">
+          <!-- React Tier -->
+          <div class="mern-node-card node-react active" data-mern="react">
+            <div class="mern-node-icon">⚛</div>
+            <h3>React.js</h3>
+            <div class="node-role">Client Tier (Frontend)</div>
+            <p>Single Page Application, Virtual DOM, Components, Hooks, Axios HTTP calls.</p>
+          </div>
+
+          <!-- Express Tier -->
+          <div class="mern-node-card node-express" data-mern="express">
+            <div class="mern-node-icon">⚡</div>
+            <h3>Express.js</h3>
+            <div class="node-role">Web Framework Tier</div>
+            <p>RESTful API routing, Middleware pipeline, JWT authentication, CORS handling.</p>
+          </div>
+
+          <!-- Node.js Tier -->
+          <div class="mern-node-card node-node" data-mern="node">
+            <div class="mern-node-icon">🟢</div>
+            <h3>Node.js</h3>
+            <div class="node-role">Server Runtime Tier</div>
+            <p>V8 JavaScript engine, Event Loop, non-blocking asynchronous I/O, npm packages.</p>
+          </div>
+
+          <!-- MongoDB Tier -->
+          <div class="mern-node-card node-mongo" data-mern="mongo">
+            <div class="mern-node-icon">🍃</div>
+            <h3>MongoDB</h3>
+            <div class="node-role">Data Tier (Database)</div>
+            <p>Document-oriented NoSQL database, BSON storage, Mongoose schemas and queries.</p>
+          </div>
+        </div>
+
+        <!-- Detail Drawer -->
+        <div class="mern-detail-panel" id="mernDetailDrawer">
+          <!-- Dynamically populated based on clicked node -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 4: JWT & REST API LAB -->
+    <!-- ========================================== -->
+    <section class="tab-content-panel" id="jwt-panel">
+      <div style="margin-bottom: 24px;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 6px;">
+          🔑 Interactive JWT & REST API Security Lab
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          Hands-on simulation for Unit 3 & 5. Generate a cryptographically signed JSON Web Token (JWT), inspect its Header, Payload, and Signature, and test protected API endpoints.
+        </p>
+      </div>
+
+      <div class="jwt-lab-grid">
+        <!-- Token Generator -->
+        <div class="jwt-card">
+          <h3 style="font-family: var(--font-heading); margin-bottom: 16px; color: var(--primary);">
+            1. Issue JSON Web Token (Authentication)
+          </h3>
+          
+          <label class="form-label" for="jwtRollNo">Student / Developer ID:</label>
+          <input type="text" id="jwtRollNo" class="text-input" value="DEV-101">
+
+          <label class="form-label" for="jwtStudentName">Full Name:</label>
+          <input type="text" id="jwtStudentName" class="text-input" value="Riya Sen">
+
+          <label class="form-label" for="jwtRole">Role Claim:</label>
+          <select id="jwtRole" class="text-input" style="background: var(--bg-secondary);">
+            <option value="student">Student / Learner (Standard Access)</option>
+            <option value="instructor">Instructor / Admin (Privileged Access)</option>
+          </select>
+
+          <button id="generateJwtBtn" class="btn-primary-action" style="width: 100%;">
+            ⚡ Sign & Generate Token (POST /api/auth/generate-token)
+          </button>
+
+          <div style="margin-top: 20px;">
+            <div class="form-label">Generated JWT Token:</div>
+            <textarea id="jwtOutputArea" class="text-input" rows="3" readonly style="font-family: var(--font-code); font-size: 0.8rem; background: var(--bg-tertiary);" placeholder="Token will appear here..."></textarea>
+          </div>
+        </div>
+
+        <!-- Token Inspector & Route Tester -->
+        <div class="jwt-card">
+          <h3 style="font-family: var(--font-heading); margin-bottom: 16px; color: var(--secondary);">
+            2. Token Anatomy & Protected API Test
+          </h3>
+
+          <div class="jwt-parts-visual">
+            <div>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #f43f5e;">HEADER (Algorithm & Token Type):</span>
+              <div id="jwtHeaderBox" class="jwt-part-box jwt-header-box">{ "alg": "HS256", "typ": "JWT" }</div>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #a855f7;">PAYLOAD (Claims & Identity):</span>
+              <div id="jwtPayloadBox" class="jwt-part-box jwt-payload-box">{ "rollNo": "DEV-101", "name": "Riya Sen", "role": "student" }</div>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #06b6d4;">SIGNATURE (Secret Verification):</span>
+              <div id="jwtSigBox" class="jwt-part-box jwt-signature-box">HMACSHA256(base64(header) + "." + base64(payload), secret)</div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 10px; margin-top: 16px;">
+            <button id="testProtectedApiBtn" class="btn-primary-action" style="flex: 1; background: var(--accent-emerald);">
+              🛡️ Call Protected Route (GET /api/auth/protected-profile)
+            </button>
+            <button id="tamperJwtBtn" class="btn-primary-action" style="background: var(--accent-rose);" title="Tamper with token payload to test rejection">
+              ⚠️ Tamper Token
+            </button>
+          </div>
+
+          <div style="margin-top: 16px;">
+            <div class="form-label">Server Response (Status & Data):</div>
+            <pre id="apiResponseBox" class="text-input" style="font-family: var(--font-code); font-size: 0.8rem; min-height: 80px; overflow-x: auto; background: var(--bg-tertiary);">Awaiting request...</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 5: IA & ESE EXAM PREPARATION -->
+    <!-- ========================================== -->
+    <section class="tab-content-panel" id="quiz-panel">
+      <div class="quiz-header-card">
+        <div>
+          <h2 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 6px;">
+            📝 Practical Assessment (30 pts) & Knowledge Check Engine
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            Test your knowledge across all 5 units with instant evaluations, explanations, and score tracking.
+          </p>
+        </div>
+        <div style="text-align: right;">
+          <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Current Assessment Score</div>
+          <div class="quiz-score-badge" id="quizScoreDisplay">0 / 12</div>
+          <button id="resetQuizBtn" class="btn-copy-code" style="margin-top: 6px;">Reset Quiz</button>
+        </div>
+      </div>
+
+      <!-- Quiz Questions List -->
+      <div id="quizQuestionsContainer">
+        <!-- Populated via js/app.js -->
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB: HELP, HOW TO RUN & OPERATING GUIDE -->
+    <!-- ========================================== -->
+    <section class="tab-content-panel" id="help-panel">
+      <div class="help-guide-header">
+        <div class="igh-tag" style="background: rgba(99, 102, 241, 0.2); color: var(--primary);">📖 USER & INSTRUCTOR MANUAL</div>
+        <h2>How to Run, Operate & Master This Portal</h2>
+        <p>
+          Complete walkthrough on how to start the local Node.js server, explore the 5 curriculum units, 
+          run code in real-time sandboxes, test JWT security tokens, and use instructor teaching tools.
+        </p>
+
+        <!-- Quick Start Command Box -->
+        <div class="help-quick-terminal">
+          <div class="help-terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">PowerShell / Command Prompt</span>
+          </div>
+          <pre class="help-terminal-body"><code><span class="cmd-comment"># 1. Open project directory</span>
+cd "c:\Users\cpatwapattiwar\Music\MERN 2.0"
+
+<span class="cmd-comment"># 2. Start the local server</span>
+npm start
+
+<span class="cmd-comment"># 3. Open in Browser</span>
+URL: <span class="cmd-hl">http://localhost:3000</span>
+Access: <span class="cmd-hl">Interactive Student &amp; Secured Instructor/Admin</span></code></pre>
+        </div>
+      </div>
+
+      <!-- Operational Cards Grid -->
+      <div class="help-cards-grid">
+        <!-- Card 1 -->
+        <div class="help-card">
+          <div class="help-card-icon">🚀</div>
+          <h3>1. How to Run Locally</h3>
+          <ul>
+            <li><strong>Node.js Requirement:</strong> Node.js (v18 or higher) installed on your system.</li>
+            <li><strong>Port:</strong> Default port is <code>3000</code>. To change port: <code>PORT=4000 npm start</code>.</li>
+            <li><strong>Zero Bundler Setup:</strong> No Webpack or Vite build step required—pure vanilla JS/CSS for instant lightning-fast loading!</li>
+            <li><strong>Hot Reload / Restart:</strong> Press <code>Ctrl + C</code> in terminal to stop, and <code>npm start</code> to restart.</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="help-card">
+          <div class="help-card-icon">📚</div>
+          <h3>2. Studying Curriculum Modules</h3>
+          <ul>
+            <li><strong>Every Concept includes 4 Essentials:</strong>
+              <ol style="margin-left: 18px; margin-top: 6px;">
+                <li>📌 <strong>Notes:</strong> In-depth theory and syntax explanation.</li>
+                <li>🌍 <strong>Real-World Example:</strong> Practical everyday analogy for intuition.</li>
+                <li>💻 <strong>Runnable Code Block:</strong> Complete code snippet with 1-click execution.</li>
+                <li>🎯 <strong>Concept Check MCQs:</strong> 2-3 instant interactive questions in the right column.</li>
+              </ol>
+            </li>
+            <li><strong>Interactive vs Readable Mode:</strong> Use the mode toggle pills above the modules to switch between side-by-side interactive mode and clean distraction-free reading mode.</li>
+            <li><strong>Full-Resolution Diagrams:</strong> Click on any architectural image to open the fullscreen high-res lightbox view.</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="help-card">
+          <div class="help-card-icon">👨‍🏫</div>
+          <h3>3. Dedicated Instructor Guide</h3>
+          <ul>
+            <li><strong>Private Teaching Desk:</strong> Open the <code>👨‍🏫 Instructor Guide</code> tab to access lecture breakdown strategies, blackboard analogies, and student gotchas.</li>
+            <li><strong>Viva & Interview Bank:</strong> Detailed technical oral examination questions with model answers for all 30 topics.</li>
+            <li><strong>Lab Rubrics:</strong> Clear grading criteria (30 Points Continuous Evaluation) for evaluating hands-on coding submissions.</li>
+          </ul>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="help-card">
+          <div class="help-card-icon">💻</div>
+          <h3>4. Operating Live Code Sandbox</h3>
+          <ul>
+            <li><strong>1-Click Code Loading:</strong> Click <strong>"⚡ Run in Sandbox"</strong> next to any code snippet across the modules to auto-load and execute it.</li>
+            <li><strong>Presets Menu:</strong> Choose from preloaded templates (HTML5 card, DOM manipulation, Async Node.js simulation, React state counter, and Fetch API).</li>
+            <li><strong>Live Execution:</strong> Click <strong>"⚡ Run Code"</strong> or press <code>Ctrl + Enter</code> to run in an isolated live preview iframe.</li>
+          </ul>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="help-card">
+          <div class="help-card-icon">🔑</div>
+          <h3>5. Operating JWT Security Lab</h3>
+          <ul>
+            <li><strong>Generate Token:</strong> Enter a Developer ID and Name, then click "Generate Cryptographic Token".</li>
+            <li><strong>Inspect Anatomy:</strong> View color-coded breakdown: <span style="color: #ef4444;">Header (Algorithm)</span>, <span style="color: #a855f7;">Payload (Claims)</span>, <span style="color: #06b6d4;">Signature</span>.</li>
+            <li><strong>Test Tampering:</strong> Click "Tamper Token Payload" to observe cryptographic signature failure (<code>403 Forbidden</code>).</li>
+            <li><strong>Access Protected API:</strong> Call <code>/api/auth/protected-profile</code> using the generated Bearer token.</li>
+          </ul>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="help-card">
+          <div class="help-card-icon">☀️</div>
+          <h3>6. Themes & Accessibility</h3>
+          <ul>
+            <li><strong>Light / Dark Mode:</strong> Click the pill button in the top right header (<code>🌙 Dark Mode</code> / <code>☀️ Light Mode</code>) anytime.</li>
+            <li><strong>High-Contrast Aesthetics:</strong> Both modes feature WCAG AAA compliant text contrast, curated color palettes, and luminous accents.</li>
+            <li><strong>Theme Persistence:</strong> Your preference is automatically remembered in browser <code>localStorage</code>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 6: REFERENCE BOOKS & E-RESOURCES -->
+    <!-- ========================================== -->
+    <section class="tab-content-panel" id="books-panel">
+      <div style="margin-bottom: 24px;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 6px;">
+          📖 Prescribed Textbooks & Developer Resources
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          Standard reference books along with NPTEL and official documentation portals for full stack developers.
+        </p>
+      </div>
+
+      <!-- E-Resources Row -->
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; margin-bottom: 24px;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 12px; color: var(--text-accent);">
+          🌐 Recommended E-Resources & Video Lecture Links:
+        </h3>
+        <div id="eResourcesList" style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <!-- Injected via js/app.js -->
+        </div>
+      </div>
+
+      <!-- Reference Books Grid -->
+      <div class="library-grid" id="booksGrid">
+        <!-- Injected via js/app.js -->
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 7: INSTRUCTOR DASHBOARD -->
+    <!-- ========================================== -->
+    <section class="tab-content-panel" id="faculty-panel">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <h2 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 6px;">
+            👨‍🏫 Instructor / Admin Command Center
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            Classroom Delivery Playbook, End-to-End MERN Project Stitching Architecture, Announcements, &amp; 45h Curriculum Progress.
+          </p>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button id="lockFacultyBtn" class="btn-primary-action" style="background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-color);">
+            🔒 Lock Admin Mode
+          </button>
+        </div>
+      </div>
+
+      <!-- MASTER TEACHING PLAYBOOK & MERN CODE LINKING BLUEPRINT -->
+      <div id="adminPlaybookContainer" class="admin-playbook-container" style="margin-bottom: 30px;">
+        <!-- Injected dynamically by renderAdminTeachingPlaybook() -->
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <!-- Announcement Publisher -->
+        <div class="jwt-card">
+          <h3 style="font-family: var(--font-heading); margin-bottom: 16px; color: var(--primary);">
+            📢 Broadcast Announcement
+          </h3>
+          <form id="announcementForm">
+            <label class="form-label" for="announceTitle">Notice Title:</label>
+            <input type="text" id="announceTitle" class="text-input" placeholder="e.g. Unit 3 Assessment Schedule" required>
+
+            <label class="form-label" for="announceContent">Notice Details / Instructions:</label>
+            <textarea id="announceContent" class="text-input" rows="4" placeholder="Enter instructions for learners..." required></textarea>
+
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+              <input type="checkbox" id="announceUrgent" style="cursor: pointer;">
+              <label for="announceUrgent" style="font-size: 0.85rem; color: var(--text-secondary); cursor: pointer;">
+                Mark as High Priority / Urgent
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary-action" style="width: 100%;">
+              Publish to Learner Portal
+            </button>
+          </form>
+        </div>
+
+        <!-- 45 Hours Lecture Tracking & Metrics -->
+        <div class="jwt-card">
+          <h3 style="font-family: var(--font-heading); margin-bottom: 16px; color: var(--accent-emerald);">
+            ⏱️ 45-Hour Curriculum Monitor
+          </h3>
+
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;">
+                <span>Unit 1: Web Programming, HTML5 & CSS</span>
+                <strong>9 / 9 Hours (Completed)</strong>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 100%; background: var(--unit1-color);"></div></div>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;">
+                <span>Unit 2: JavaScript, DOM & JSON</span>
+                <strong>9 / 9 Hours (Completed)</strong>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 100%; background: var(--unit2-color);"></div></div>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;">
+                <span>Unit 3: Node.js & Backend Foundations</span>
+                <strong>6 / 9 Hours (In Progress)</strong>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 66%; background: var(--unit3-color);"></div></div>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;">
+                <span>Unit 4: React.js Frontend Development</span>
+                <strong>0 / 9 Hours (Upcoming)</strong>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 0%; background: var(--unit4-color);"></div></div>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;">
+                <span>Unit 5: MERN Integration & Deployment</span>
+                <strong>0 / 9 Hours (Upcoming)</strong>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 0%; background: var(--unit5-color);"></div></div>
+            </div>
+          </div>
+
+          <div style="background: var(--bg-tertiary); padding: 12px 16px; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--text-secondary);">
+            <strong>Total Curriculum Delivered:</strong> 24 / 45 Hours (53.3% Progress)
+          </div>
+        </div>
+      </div>
+
+      <!-- Student Directory & Performance -->
+      <div class="jwt-card" style="margin-top: 24px;">
+        <h3 style="font-family: var(--font-heading); margin-bottom: 12px; color: var(--text-primary);">
+          👥 Learner Directory & Assessment Records (30 Points Max)
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+          Live status fetched from the backend course server.
+        </p>
+
+        <div style="overflow-x: auto;">
+          <table class="roster-table">
+            <thead>
+              <tr>
+                <th>Learner ID</th>
+                <th>Learner Name</th>
+                <th>Curriculum Completion</th>
+                <th>Assessment (30 pts)</th>
+                <th>Certification Status</th>
+              </tr>
+            </thead>
+            <tbody id="studentRosterBody">
+              <!-- Injected by instructor.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Instructor Security Passcode Modal -->
+  <div class="modal-overlay" id="facultyModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title"><span>🔒</span> Security Authentication</h3>
+        <button class="btn-close-modal" id="closeFacultyModalBtn">&times;</button>
+      </div>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">
+        Restricted Access: Enter the authorized security passcode to unlock Instructor Guide and Admin modes.
+      </p>
+
+      <form id="facultyLoginForm">
+        <label class="form-label" for="facultyPasscodeInput">Passcode:</label>
+        <input type="password" id="facultyPasscodeInput" class="text-input" placeholder="Enter security passcode" required autocomplete="off">
+        <div id="facultyErrorMsg" style="color: var(--accent-rose); font-size: 0.82rem; margin-bottom: 12px; display: none;"></div>
+        <button type="submit" class="btn-primary-action" style="width: 100%;">
+          Verify &amp; Unlock
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div style="max-width: 1380px; margin: 0 auto;">
+      <p><strong>Full Stack Web Development Academy</strong> • Modern MERN Engineering</p>
+      <p style="margin: 6px 0;">Curriculum: <strong>Full Stack Development using MERN</strong> (45 Hours Comprehensive)</p>
+      <p style="font-size: 0.78rem; color: var(--text-muted);">
+        Practical Assessment (30 Marks) & Final Evaluation (70 Marks) • Built with HTML5, CSS3, JavaScript, Node.js & Express
+      </p>
+    </div>
+  </footer>
+
+  <!-- High-Res Infographic Lightbox Modal -->
+  <div class="image-lightbox" id="imageLightboxModal" onclick="closeImageLightbox()">
+    <button class="lightbox-close-btn" onclick="closeImageLightbox()">&times;</button>
+    <img id="lightboxImg" src="" alt="Infographic zoom" onclick="event.stopPropagation()">
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/playbookData.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/instructor.js"></script>
+</body>
+</html>

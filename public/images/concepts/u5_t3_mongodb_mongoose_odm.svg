@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="420" fill="url(#bgGrad)" rx="12" />
+  <rect width="898" height="418" x="1" y="1" fill="none" stroke="#334155" stroke-width="1.5" rx="11" />
+
+  <!-- Grid Accents -->
+  <g opacity="0.06" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="70" x2="900" y2="70" />
+    <line x1="0" y1="140" x2="900" y2="140" />
+    <line x1="0" y1="210" x2="900" y2="210" />
+    <line x1="0" y1="280" x2="900" y2="280" />
+    <line x1="0" y1="350" x2="900" y2="350" />
+    <line x1="150" y1="0" x2="150" y2="420" />
+    <line x1="300" y1="0" x2="300" y2="420" />
+    <line x1="450" y1="0" x2="450" y2="420" />
+    <line x1="600" y1="0" x2="600" y2="420" />
+    <line x1="750" y1="0" x2="750" y2="420" />
+  </g>
+
+  <!-- Top Title Bar -->
+  <rect x="24" y="18" width="160" height="24" rx="12" fill="#a855f7" fill-opacity="0.2" stroke="#a855f7" stroke-width="1" />
+  <text x="104" y="34" font-family="'Outfit', system-ui, sans-serif" font-size="11" font-weight="700" fill="#a855f7" text-anchor="middle" letter-spacing="0.5">UNIT 5.3 • DATABASE TIER</text>
+  
+  <text x="24" y="62" font-family="'Outfit', system-ui, sans-serif" font-size="19" font-weight="800" fill="#ffffff">MongoDB &amp; Mongoose ODM: Schema to BSON Collections</text>
+  <text x="24" y="80" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#94a3b8">Object Document Mapping providing strict schema types, validation hooks, and relational populate queries</text>
+
+  <!-- Content Graphic -->
+  <g transform="translate(0, 15)">
+    
+      <!-- Mongoose Schema -->
+      <rect x="50" y="120" width="250" height="195" rx="8" fill="url(#cardGrad)" stroke="#10b981" stroke-width="1.8" filter="url(#shadow)" />
+      <text x="175" y="145" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">1. Mongoose Schema</text>
+      <rect x="65" y="160" width="220" height="140" rx="4" fill="#0f172a" />
+      <text x="75" y="180" font-family="'Fira Code', monospace" font-size="9" fill="#34d399">const UserSchema = new Schema({</text>
+      <text x="85" y="200" font-family="'Fira Code', monospace" font-size="9" fill="#ffffff">  name: { type: String, req: true },</text>
+      <text x="85" y="220" font-family="'Fira Code', monospace" font-size="9" fill="#38bdf8">  email: { type: String, unique: true },</text>
+      <text x="85" y="240" font-family="'Fira Code', monospace" font-size="9" fill="#a5b4fc">  password: { type: String },</text>
+      <text x="85" y="260" font-family="'Fira Code', monospace" font-size="9" fill="#fbbf24">  createdAt: { type: Date }</text>
+      <text x="75" y="280" font-family="'Fira Code', monospace" font-size="9" fill="#34d399">});</text>
+
+      <!-- Middle: Validation &amp; Mapping -->
+      <path d="M 300 215 L 360 215" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrow)" />
+      
+      <rect x="360" y="145" width="180" height="140" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5" />
+      <text x="450" y="175" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#a5b4fc" text-anchor="middle">2. Mongoose Model</text>
+      <rect x="375" y="190" width="150" height="30" rx="4" fill="#0f172a" />
+      <text x="450" y="210" font-family="'Fira Code', monospace" font-size="10" fill="#818cf8" text-anchor="middle">model('User', Schema)</text>
+      <text x="450" y="245" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Data Validation Hooks</text>
+      <text x="450" y="265" font-family="'Inter', sans-serif" font-size="10" fill="#34d399" text-anchor="middle">BSON Serialization</text>
+
+      <!-- Arrow to DB -->
+      <path d="M 540 215 L 600 215" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrow)" />
+
+      <!-- MongoDB Collection -->
+      <rect x="600" y="120" width="250" height="195" rx="8" fill="url(#cardGrad)" stroke="#10b981" stroke-width="1.8" filter="url(#shadow)" />
+      <text x="725" y="145" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">3. MongoDB (users collection)</text>
+      <rect x="615" y="160" width="220" height="140" rx="4" fill="#0f172a" />
+      <text x="625" y="180" font-family="'Fira Code', monospace" font-size="9" fill="#86efac">{</text>
+      <text x="635" y="200" font-family="'Fira Code', monospace" font-size="9" fill="#fca5a5">  "_id": ObjectId("65f12a..."),</text>
+      <text x="635" y="220" font-family="'Fira Code', monospace" font-size="9" fill="#ffffff">  "name": "Learner",</text>
+      <text x="635" y="240" font-family="'Fira Code', monospace" font-size="9" fill="#38bdf8">  "email": "learner@mern.io",</text>
+      <text x="635" y="260" font-family="'Fira Code', monospace" font-size="9" fill="#a5b4fc">  "password": "$2a$10$eR..."</text>
+      <text x="625" y="280" font-family="'Fira Code', monospace" font-size="9" fill="#86efac">}</text>
+    
+  </g>
+</svg>

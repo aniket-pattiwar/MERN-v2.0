@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="420" fill="url(#bgGrad)" rx="12" />
+  <rect width="898" height="418" x="1" y="1" fill="none" stroke="#334155" stroke-width="1.5" rx="11" />
+
+  <!-- Grid Accents -->
+  <g opacity="0.06" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="70" x2="900" y2="70" />
+    <line x1="0" y1="140" x2="900" y2="140" />
+    <line x1="0" y1="210" x2="900" y2="210" />
+    <line x1="0" y1="280" x2="900" y2="280" />
+    <line x1="0" y1="350" x2="900" y2="350" />
+    <line x1="150" y1="0" x2="150" y2="420" />
+    <line x1="300" y1="0" x2="300" y2="420" />
+    <line x1="450" y1="0" x2="450" y2="420" />
+    <line x1="600" y1="0" x2="600" y2="420" />
+    <line x1="750" y1="0" x2="750" y2="420" />
+  </g>
+
+  <!-- Top Title Bar -->
+  <rect x="24" y="18" width="160" height="24" rx="12" fill="#06b6d4" fill-opacity="0.2" stroke="#06b6d4" stroke-width="1" />
+  <text x="104" y="34" font-family="'Outfit', system-ui, sans-serif" font-size="11" font-weight="700" fill="#06b6d4" text-anchor="middle" letter-spacing="0.5">UNIT 4.6 • SPA NAVIGATION</text>
+  
+  <text x="24" y="62" font-family="'Outfit', system-ui, sans-serif" font-size="19" font-weight="800" fill="#ffffff">Client-Side Routing: React Router &amp; HTML5 History API</text>
+  <text x="24" y="80" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#94a3b8">Synchronizing URL changes with component views without performing full browser page reloads</text>
+
+  <!-- Content Graphic -->
+  <g transform="translate(0, 15)">
+    
+      <!-- Browser Address Bar -->
+      <rect x="150" y="110" width="600" height="38" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1.5" />
+      <circle cx="170" cy="129" r="6" fill="#ef4444" />
+      <circle cx="188" cy="129" r="6" fill="#f59e0b" />
+      <circle cx="206" cy="129" r="6" fill="#10b981" />
+      <rect x="230" y="117" width="480" height="24" rx="4" fill="#1e293b" />
+      <text x="245" y="133" font-family="'Fira Code', monospace" font-size="11" fill="#38bdf8">http://localhost:3000/dashboard</text>
+
+      <!-- HTML5 History API Sync -->
+      <path d="M 450 148 L 450 185" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow)" />
+      <text x="450" y="170" font-family="'Fira Code', monospace" font-size="9" fill="#a5b4fc" text-anchor="middle">pushState() / popstate</text>
+
+      <!-- Routes Switcher Engine -->
+      <rect x="150" y="185" width="600" height="125" rx="10" fill="url(#cardGrad)" stroke="#6366f1" stroke-width="1.8" filter="url(#shadow)" />
+      <text x="180" y="210" font-family="'Fira Code', monospace" font-size="12" font-weight="700" fill="#818cf8">&lt;Routes&gt; Matching Engine</text>
+
+      <!-- Route 1 -->
+      <rect x="170" y="225" width="165" height="65" rx="6" fill="#0f172a" stroke="#475569" />
+      <text x="185" y="245" font-family="'Fira Code', monospace" font-size="10" fill="#94a3b8">path="/"</text>
+      <text x="185" y="265" font-family="'Inter', sans-serif" font-size="10" fill="#64748b">&lt;HomePage /&gt;</text>
+      <text x="185" y="280" font-family="'Inter', sans-serif" font-size="8" fill="#475569">(Unmounted)</text>
+
+      <!-- Route 2 (Active Match) -->
+      <rect x="365" y="225" width="170" height="65" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="2" />
+      <text x="380" y="245" font-family="'Fira Code', monospace" font-size="10" fill="#34d399">path="/dashboard"</text>
+      <text x="380" y="265" font-family="'Outfit', sans-serif" font-size="11" font-weight="700" fill="#ffffff">&lt;Dashboard /&gt;</text>
+      <text x="380" y="280" font-family="'Inter', sans-serif" font-size="8" fill="#34d399">✓ Active Rendered View</text>
+
+      <!-- Route 3 -->
+      <rect x="565" y="225" width="165" height="65" rx="6" fill="#0f172a" stroke="#475569" />
+      <text x="580" y="245" font-family="'Fira Code', monospace" font-size="10" fill="#94a3b8">path="*"</text>
+      <text x="580" y="265" font-family="'Inter', sans-serif" font-size="10" fill="#64748b">&lt;NotFound /&gt;</text>
+      <text x="580" y="280" font-family="'Inter', sans-serif" font-size="8" fill="#475569">(Fallback 404)</text>
+    
+  </g>
+</svg>

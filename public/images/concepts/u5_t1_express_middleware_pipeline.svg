@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="420" fill="url(#bgGrad)" rx="12" />
+  <rect width="898" height="418" x="1" y="1" fill="none" stroke="#334155" stroke-width="1.5" rx="11" />
+
+  <!-- Grid Accents -->
+  <g opacity="0.06" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="70" x2="900" y2="70" />
+    <line x1="0" y1="140" x2="900" y2="140" />
+    <line x1="0" y1="210" x2="900" y2="210" />
+    <line x1="0" y1="280" x2="900" y2="280" />
+    <line x1="0" y1="350" x2="900" y2="350" />
+    <line x1="150" y1="0" x2="150" y2="420" />
+    <line x1="300" y1="0" x2="300" y2="420" />
+    <line x1="450" y1="0" x2="450" y2="420" />
+    <line x1="600" y1="0" x2="600" y2="420" />
+    <line x1="750" y1="0" x2="750" y2="420" />
+  </g>
+
+  <!-- Top Title Bar -->
+  <rect x="24" y="18" width="160" height="24" rx="12" fill="#a855f7" fill-opacity="0.2" stroke="#a855f7" stroke-width="1" />
+  <text x="104" y="34" font-family="'Outfit', system-ui, sans-serif" font-size="11" font-weight="700" fill="#a855f7" text-anchor="middle" letter-spacing="0.5">UNIT 5.1 • BACKEND MIDDLEWARE</text>
+  
+  <text x="24" y="62" font-family="'Outfit', system-ui, sans-serif" font-size="19" font-weight="800" fill="#ffffff">Express.js Middleware Execution Pipeline</text>
+  <text x="24" y="80" font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#94a3b8">Sequential processing of HTTP Requests through middleware chain via `next()` invocation</text>
+
+  <!-- Content Graphic -->
+  <g transform="translate(0, 15)">
+    
+      <!-- Client HTTP Request -->
+      <rect x="40" y="140" width="130" height="140" rx="8" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="105" y="170" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" fill="#38bdf8" text-anchor="middle">Client HTTP</text>
+      <rect x="55" y="190" width="100" height="24" rx="4" fill="#0284c7" />
+      <text x="105" y="206" font-family="'Fira Code', monospace" font-size="9" fill="#ffffff" text-anchor="middle">GET /api/data</text>
+      <text x="105" y="245" font-family="'Inter', sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">req, res objects</text>
+
+      <!-- Arrow 1 -->
+      <line x1="170" y1="210" x2="220" y2="210" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)" />
+
+      <!-- Middleware 1: Logger -->
+      <rect x="220" y="125" width="140" height="170" rx="8" fill="url(#cardGrad)" stroke="#818cf8" stroke-width="1.5" />
+      <text x="290" y="150" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#a5b4fc" text-anchor="middle">1. Logging</text>
+      <rect x="235" y="170" width="110" height="40" rx="4" fill="#0f172a" />
+      <text x="290" y="195" font-family="'Fira Code', monospace" font-size="9" fill="#818cf8" text-anchor="middle">morgan('dev')</text>
+      <text x="290" y="240" font-family="'Inter', sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Logs method &amp; IP</text>
+      <rect x="245" y="260" width="90" height="20" rx="4" fill="#312e81" />
+      <text x="290" y="274" font-family="'Fira Code', monospace" font-size="9" fill="#c7d2fe" text-anchor="middle">next() ↓</text>
+
+      <!-- Arrow 2 -->
+      <line x1="360" y1="210" x2="410" y2="210" stroke="#818cf8" stroke-width="2" marker-end="url(#arrow)" />
+
+      <!-- Middleware 2: Auth Check -->
+      <rect x="410" y="125" width="140" height="170" rx="8" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="1.8" />
+      <text x="480" y="150" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#c084fc" text-anchor="middle">2. JWT Verify</text>
+      <rect x="425" y="170" width="110" height="40" rx="4" fill="#0f172a" />
+      <text x="480" y="195" font-family="'Fira Code', monospace" font-size="9" fill="#c084fc" text-anchor="middle">verify(token)</text>
+      <text x="480" y="240" font-family="'Inter', sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Attaches req.user</text>
+      <rect x="435" y="260" width="90" height="20" rx="4" fill="#581c87" />
+      <text x="480" y="274" font-family="'Fira Code', monospace" font-size="9" fill="#e9d5ff" text-anchor="middle">next() ↓</text>
+
+      <!-- Arrow 3 -->
+      <line x1="550" y1="210" x2="600" y2="210" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow)" />
+
+      <!-- Route Handler -->
+      <rect x="600" y="125" width="140" height="170" rx="8" fill="url(#cardGrad)" stroke="#10b981" stroke-width="2" filter="url(#shadow)" />
+      <text x="670" y="150" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">3. Controller</text>
+      <rect x="615" y="170" width="110" height="40" rx="4" fill="#0f172a" />
+      <text x="670" y="195" font-family="'Fira Code', monospace" font-size="9" fill="#34d399" text-anchor="middle">getData(req, res)</text>
+      <text x="670" y="240" font-family="'Inter', sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Queries MongoDB</text>
+      <rect x="625" y="260" width="90" height="20" rx="4" fill="#065f46" />
+      <text x="670" y="274" font-family="'Fira Code', monospace" font-size="9" fill="#a7f3d0" text-anchor="middle">res.json()</text>
+
+      <!-- Return Arrow to Client -->
+      <path d="M 670 300 L 670 340 L 105 340 L 105 280" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4" fill="none" marker-end="url(#arrow)" />
+      <text x="380" y="330" font-family="'Fira Code', monospace" font-size="10" fill="#34d399" text-anchor="middle">200 OK HTTP Response Body (JSON Payload)</text>
+    
+  </g>
+</svg>
